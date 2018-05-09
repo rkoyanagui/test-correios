@@ -15,8 +15,9 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais
   
 Examples:
    | url                                  | produto_ou_servico                           | cep_origem | cep_destino | tipo_servico    | validacao            |
-   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | 05352140   | 06020000    | Aerograma       | Resultado do Cálculo |
+   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | 06455020   | 06020000    | Aerograma       | Resultado do Cálculo |
 #   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Internacionais | DADOS NAO ENCONTRADOS          |
 #   | http://www.correios.com.br/para-voce | Serviços internacionais                      | DADOS ENCONTRADOS COM SUCESSO. |
 #   | http://www.correios.com.br/para-voce | Consulta a áreas com restrição de entrega    | DADOS NAO ENCONTRADOS          |
 #   | http://www.correios.com.br/para-voce | Serviços nacionais                           | DADOS NAO ENCONTRADOS          |
+

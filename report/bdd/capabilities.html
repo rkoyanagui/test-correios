@@ -49,7 +49,7 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 0],
+                ['Passing', 2],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
@@ -82,7 +82,7 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 requirements tested successfully'},
+                {label: '2 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
                 {label: '0} requirements with failures'},
@@ -177,7 +177,7 @@
             <a href="#"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-05-2018 22:28</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-05-2018 12:02</span>
     <br style="clear:left"/>
 </div>
 
@@ -210,8 +210,8 @@
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria
                                         (tests)</a></td>
-                                    <td>1</td>
-                                    <td>0</td>
+                                    <td>3</td>
+                                    <td>2</td>
                                     <td>1</td>
                                     <td>0</td>
                                     <td>0</td>
@@ -241,9 +241,9 @@
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>1</td>
-            <td>0 (0%)</td>
-            <td>1 (100%)</td>
+            <td>3</td>
+            <td>2 (67%)</td>
+            <td>1 (33%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -257,15 +257,15 @@
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>1</td>
-            <td>0 (0%)</td>
-            <td>1 (100%)</td>
+            <td>3</td>
+            <td>2 (67%)</td>
+            <td>1 (33%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">1 seconds</td>
+                <td colspan="5">1 minutes 45 seconds</td>
         </tr>
         </body>
     </table>
@@ -293,6 +293,52 @@
                         </thead>
                         <tbody>
 
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="2aa590fd19bac942a8eda578387f1de17f0534ac3627b89d37979afaa74c2602.html" class="ellipsis"
+                                           title="Buscar Agencia ">
+                                            Buscar Agencia&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">8</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-05-09 12:02:16">12:02:16</td>
+
+                                <td class="SUCCESS-text">31.76</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="a0cbfdf692c148f12dd82df1cf8d31357875c2a2a62e04dae07fbae4e811d91e.html" class="ellipsis"
+                                           title="Calculador de Pre&ccedil;os e Prazos Nacionais ">
+                                            Calculador de Pre&ccedil;os e Prazos Nacionais&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">11</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-05-09 15:51:26">15:51:26</td>
+
+                                <td class="SUCCESS-text">47.36</td>
+                            </tr>
+
                             <tr class="test-ERROR">
                                 <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
@@ -300,20 +346,20 @@
                                 <td class="ERROR-text">
                                     <div class="ellipsis">
 
-                                        <a href="2aa590fd19bac942a8eda578387f1de17f0534ac3627b89d37979afaa74c2602.html" class="ellipsis"
-                                           title="Buscar Agencia Unsupported driver exception: Could n...">
-                                            Buscar Agencia&nbsp;(1  examples)
+                                        <a href="e4a7fe877f0786de294f118cb4f3a856e31fb89fc830ea182f1f5fa5d37669e0.html" class="ellipsis"
+                                           title="Calculador de Pre&ccedil;os e Prazos Nacionais por Endereco Timeout exception: Expected condition...">
+                                            Calculador de Pre&ccedil;os e Prazos Nacionais por Endereco&nbsp;(1  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="ERROR-text">3</td>
+                                <td class="ERROR-text">9</td>
 
 
-                                <td class="ERROR-text" data-sort="2018-05-08 22:28:13">22:28:13</td>
+                                <td class="ERROR-text" data-sort="2018-05-09 17:12:16">17:12:16</td>
 
-                                <td class="ERROR-text">0.8</td>
+                                <td class="ERROR-text">26.28</td>
                             </tr>
                         </tbody>
                     </table>

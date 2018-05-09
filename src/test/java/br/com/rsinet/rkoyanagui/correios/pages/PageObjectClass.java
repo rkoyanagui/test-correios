@@ -65,6 +65,14 @@ public class PageObjectClass extends PageObject{
 	
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
+	
+	public WebElement getHeader(String query) {
+		return this.find(By.xpath(".//*[self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6][.[contains(text(),\"Busca CEP - Endereço\")][1]]"));
+	}
+	
+	public WebElement getBotao(String query) {
+		return this.find(By.xpath(".//*[button[contains(text(),\"" + query + "\")][1]]"));
+	}
 
 	public WebElement getItemMenuProdutoOuServico() {
 		return itemMenuProdutoOuServico;
@@ -92,8 +100,21 @@ public class PageObjectClass extends PageObject{
 	public WebElement getMunicipio() {
 		return municipio;
 	}
+	
+	public WebElement getMunicipio(String query) {
+		municipio = this.find(By.xpath(".//*[.[contains(.,\""
+				+ query + "\")]]"));
+		return municipio;
+	}
 
 	public WebElement getResultadoBuscaAgencia() {
+		return resultadoBuscaAgencia;
+	}
+	
+	public WebElement getResultadoBuscaAgencia(String query) {
+		resultadoBuscaAgencia = this.find(By.xpath(
+				".//*[@id='tableNomeAgencia']/*[contains(.,\""
+				+ query + "\")]"));
 		return resultadoBuscaAgencia;
 	}
 

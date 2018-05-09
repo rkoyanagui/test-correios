@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class=" js"><head><meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">/* &lt;![CDATA[ */_cf_loadingtexthtml="&lt;img alt=' ' src='/cfscripts/ajax/resources/cf/images/loading.gif'/&gt;";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cfscripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=8578;
+_cf_flash_policy_port=1244;
+_cf_clientid='F8D389A2DA42EDAD464DCCAC1BD653B4';/* ]]&gt; */</script><script type="text/javascript" src="/cfscripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/package/cfajax.js"></script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	var _cf_cfcAgencia=ColdFusion.AjaxProxy.init('/sistemas/agencias/cfc/cfcAgencia.cfc','ProxyAjax');
+	_cf_cfcAgencia.prototype.getAgenciasProximas=function(latitude,longitude) { return ColdFusion.AjaxProxy.invoke(this, "getAgenciasProximas","73AE25A596902295", {latitude:latitude,longitude:longitude});};
+	_cf_cfcAgencia.prototype.getBairro=function(UF,municipio) { return ColdFusion.AjaxProxy.invoke(this, "getBairro","73AE25A596902295", {UF:UF,municipio:municipio});};
+	_cf_cfcAgencia.prototype.getUF=function() { return ColdFusion.AjaxProxy.invoke(this, "getUF","73AE25A596902295", {});};
+	_cf_cfcAgencia.prototype.getMunicipio=function(UF) { return ColdFusion.AjaxProxy.invoke(this, "getMunicipio","73AE25A596902295", {UF:UF});};
+/* ]]&gt; */</script>
+<script type="text/javascript" src="/cfscripts/cfform.js"></script>
+<script type="text/javascript" src="/cfscripts/masks.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+<meta http-equiv="Content-Language" content="pt" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>home</title>
+<meta name="description" content="[page]" />
+<meta name="keywords" content="" />
+<script type="text/javascript"> 
+pageid = '09EEC128-5056-9163-892E41DCA59EAEC9'; 
+</script>
+<noscript>
+&lt;p&gt;identificador da pÃ¡gina&lt;/p&gt;
+</noscript>
+<base href="http://www2.correios.com.br/" /> 
+<link rel="icon" href="home2014/img/icon.png" type="image/gif" />
+
+<!-- scripts --><noscript>&lt;p&gt;Biblioteca de efeitos&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-1.6.2.min.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para menus&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/ddaccordion.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para tabbes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jtabber.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos colorbox&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery.colorbox-min.js"></script>
+   <noscript>&lt;p&gt;Biblioteca de validação de formulários&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/validations.js"></script>
+
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>
+  <script type="text/javascript" src="home2014/js/scripts.js"></script>
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>   
+  <script type="text/javascript" src="home2014/js/cookie.js"></script>
+    <noscript>&lt;p&gt;&lt;/p&gt;Script Javascript</noscript>   
+<script type="text/javascript">document.documentElement.className += " js";</script>
+  <noscript>&lt;p&gt;Controle de abas&lt;/p&gt;</noscript>
+ <noscript>&lt;p&gt;Biblioteca de animações&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-ui-1.8.16.custom.min.js">
+  </script>  
+   <script type="text/javascript">
+   jQuery(function($){
+        $.datepicker.regional['pt-BR'] = {
+                closeText: 'Fechar',
+                prevText: '&amp;#x3c;Anterior',
+                nextText: 'Pr&amp;oacute;ximo&amp;#x3e;',
+                currentText: 'Hoje',
+                monthNames: ['Janeiro','Fevereiro','Mar&amp;ccedil;o','Abril','Maio','Junho',
+                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+                'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda-feira','Ter&amp;ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+});
+</script>
+  
+    
+
+<!-- /scripts -->
+
+<!-- CSS -->
+
+  <link href="home2014/css/layout.css" rel="stylesheet" type="text/css" />
+<!-- /CSS --->
+ 
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1101288197313912=function()
+	{
+		ColdFusion.Bind.register([],{'bindTo':'estadoAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getUF','_cf_ajaxproxytoken':'73AE25A596902295','bindExpr':[]},ColdFusion.Bind.cfcBindHandler,true);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1101288197313912);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1101288197313913=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change']],{'bindTo':'municipioAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getMunicipio','_cf_ajaxproxytoken':'73AE25A596902295','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1101288197313913);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1101288197313914=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change'],['municipioAgencia','formBuscaAgencia','change']],{'bindTo':'bairroAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getBairro','_cf_ajaxproxytoken':'73AE25A596902295','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value'],['MUNICIPIO','municipioAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1101288197313914);
+/* ]]&gt; */</script>
+<script type="text/javascript">
+&lt;!--
+    _CF_checkformBuscaAgencia = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length &gt; 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//--&gt;
+</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFDIV');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1101288197313915=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','','change'],['municipioAgencia','','change'],['bairroAgencia','','change'],['selHorario','','change'],['ckbAtendimento','','change']],{'bindTo':'divDetalheAgencia','bindExpr':['sistemas/agencias/inc/divDetalheAgencia.cfm?uf=',['estadoAgencia','','value'],'&amp;municipio=',['municipioAgencia','','value'],'&amp;bairro=',['bairroAgencia','','value'],'&amp;horario=',['selHorario','','value'],'&amp;atendimento=',['ckbAtendimento','','value']]},ColdFusion.Bind.urlBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1101288197313915);
+/* ]]&gt; */</script>
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/geocoder.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/infowindow.js"></script></head>
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  <body><span></span>             <!--<![endif]-->
+<div class="back">
+
+<div class="acessibilidade">
+  <div class="wrap">
+    <ul>
+      
+        <li class="tocontent"> <span class="separator-bar"> </span> <a href="javascript:void(0);" onclick="document.location.hash='ancora';" title="Ir para o conteúdo principal da página">Ir ao  conteúdo</a> </li>
+        <li class="font-plus" id="biggerFont"> <a href="javascript:void(0);" title="Aumentar o tamanho da fonte do texto">A</a> </li>
+        <li id="defaultFont"> <span class="separator-dot"> </span> <a href="javascript:void(0);" title="Retornar a fonte do texto para tamanho padrão">Tamanho padrão</a> <span class="separator-dot"> </span> </li>
+        <li class="font-minus" id="smallerFont"> <a href="javascript:void(0);" title="Diminuir o tamanho da fonte do texto">A</a> </li>
+        <li class="contrast" id="contrast"> <span class="separator-bar"> </span> <a href="javascript:void(0);" title="Modificar para o modo de alto contraste">Contraste</a> <span class="separator-bar"> </span> </li>
+        <li> <span class="separator-bar"> </span> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/">Teclado Virtual</a> </li>
+        <li> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/" id="txt-headmouse">Headmouse</a></li>
+        
+    </ul>
+  </div>
+</div>
+ 
+<!-- header --->
+
+
+<div class="header">
+<h1 class="logo float-left"> <a href="http://www.correios.com.br" title="Ir para a página incial" alt="Logo Correios"><img src="home2014/img/layout/logo.png" alt="Ir para a página inicial" title="Ir para a página incial" /></a> </h1>
+<div class="acesso_rapido">
+
+  <div class="text-right">
+    
+    <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/fc">Fale com os Correios</a><br />
+  </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="0h">Outros sites</div>
+    <span class="dados abaaz" contentindex="0c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Acesse a outros sites dos Correios</span><br />
+      
+      <a href="produtosaz/default.cfm?filtro=R/Z"><b>Espaço da Filatelia</b></a><br />
+      <a href="http://blog.correios.com.br/correios"><b>Blog Institucional do Correios</b></a><br />
+      <a href="http://m.correios.com.br"><b>Correios mobile</b></a><br />
+    </div>
+    </span> </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="1h">Correios de A a Z</div>
+    <span class="dados abaaz" contentindex="1c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos.<br />
+      </span><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1"><b>Todos os itens</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z?filtro=abc"><b>Correios de A-C</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=def"><b>Correios de D-F</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=ghijklmnopq"><b>Correios de G-Q</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=rstuvwxyz"><b>Correios de R-Z</b></a> </div>
+    </span> </div>
+  </div>
+  <!-- acesso rápido -->
+  <br class="clr" />
+  </div>
+  <div class="tabs">
+  
+  <div class="wrap">
+    <ul class="tabs-list">
+      
+      <li class="current"> <a href="default.cfm">
+        <h2>Sistemas</h2>
+        </a> </li>
+    </ul>
+  </div>
+   
+<!-- /header --->
+<div class="wrap">   
+<div class="content">
+<div class="laminas" style="display: block;">
+<div class="column1">
+<span class="mver"> 
+<span class="dominio"></span>
+<h3>Sistemas</h3>
+<ul>
+  <li><a href="sistemas/agencias/">Busca agências</a></li>
+</ul> 
+</span>
+<!-- Fim Menu vertical -->
+</div>
+<!-- column1 -->
+<div class="column2">
+<div class="breadcrumb"></div>
+<div class="content  trescolunas">
+<a name="ancora"></a>
+
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/cssAgencia.css" />
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/validationEngine.jquery.css" />
+<div class="tituloimagem"><h3>Agências</h3> </div>
+<div class="quadroavisos">
+<p><strong>Restrição de acesso em Agências dos Correios</strong></p>
+<p>Agências localizadas dentro de prédios de terceiros, nos quais os Correios não possuem ingerências, podem possuir regras específicas para acesso, que deverão ser atendidas pelo cliente.</p>
+<p>A seguir, listamos algumas agências que possuem esta restrição:</p>
+<p>Distrito Federal:<br />- AC Palácio do Planalto<br />- AC Quartel General do Exército<br />- AC STF<br />- AC STJ<br />- AC TCU </p>
+<p>Minas Gerais<br />- AC CENIBRA<br />- AC FIAT<br />- AC Jaraguá</p>
+<p>Rio de Janeiro<br />
+- AC Academia Militar das Agulhas Negras<br />- AC Afonso Cavalcanti<br />- AC Fundação Osvaldo Cruz<br />- AC Ilha do Mocangue<br />- AC Marcílio Dias<br />- AC Petrobrás<br />- AC REDUC<br />- AC Ten. Fábio Magalhães</p>
+</div>
+<div class="ctrlcontent">  
+
+<p>Através de sua rede de agências, os Correios prestam serviços aos seus clientes, proporcionando o acesso ao atendimento postal e a outros serviços que trazem benefícios e conveniência.</p>
+<form name="formBuscaAgencia" id="formBuscaAgencia" action="/sistemas/agencias/Default.cfm" method="post" onsubmit="return _CF_checkformBuscaAgencia(this)">
+<input type="Hidden" name="coordenadaEndereco" id="coordenadaEndereco" value="" />
+<div class="form">
+<div class="contentform">
+<h4>Buscar agência por:</h4>
+<div class="div8col"> 
+<span class="f2col">
+<label>
+<input type="radio" value="P" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('P'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Proximidade </label>
+</span><span class="f2col">
+<label>
+<input type="radio" value="L" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('L'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Localidade</label>
+</span> <span class="f2col">
+<label>
+<input type="radio" value="S" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('S'); jQuery('#formBuscaAgencia').validationEngine('hide');" />
+Serviço</label>
+</span>
+</div>
+<!--SE PROXIMIDADE  -->
+<div id="divProximidade" style="display: none;">
+<div class="separator-line"></div>
+<span>
+<label>Digite endereço de onde você está procurando <br />
+<input id="cepEndereco" name="cepEndereco" type="textbox" value="Guará, Brasília" style="width: 447px;" class="f8col text-input" />
+</label>
+</span> </div>
+<!-- SE LOCALIDADE -->
+<div class="separator"></div>
+<div id="divLocalidade" style="display: block;">
+<p class="dica dicarotulo">O campos assinalados com (*) são obrigatórios</p>
+<span>
+<label>Estado *: <br /><select name="estadoAgencia" id="estadoAgencia" class="f3col validate[required]">
+<option value=""></option><option value="AC">ACRE</option><option value="AL">ALAGOAS</option><option value="AP">AMAPÁ</option><option value="AM">AMAZONAS</option><option value="BA">BAHIA</option><option value="CE">CEARÁ</option><option value="DF">DISTRITO FEDERAL</option><option value="ES">ESPÍRITO SANTO</option><option value="GO">GOIÁS</option><option value="MA">MARANHÃO</option><option value="MG">MINAS GERAIS</option><option value="MS">MATO GROSSO DO SUL</option><option value="MT">MATO GROSSO</option><option value="PA">PARÁ</option><option value="PB">PARAÍBA</option><option value="PE">PERNAMBUCO</option><option value="PI">PIAUÍ</option><option value="PR">PARANÁ</option><option value="RJ">RIO DE JANEIRO</option><option value="RN">RIO GRANDE DO NORTE</option><option value="RO">RONDÔNIA</option><option value="RR">RORAIMA</option><option value="RS">RIO GRANDE DO SUL</option><option value="SC">SANTA CATARINA</option><option value="SE">SERGIPE</option><option value="SP">SÃO PAULO</option><option value="TO">TOCANTINS</option></select></label>
+</span> 
+<span>
+<label>Município *: <br /><select name="municipioAgencia" id="municipioAgencia" class="f5col validate[required]">
+<option value=""></option><option value="ADAMANTINA               ">ADAMANTINA               </option><option value="ADOLFO                   ">ADOLFO                   </option><option value="AGUAI                    ">AGUAI                    </option><option value="AGUAS DA PRATA           ">AGUAS DA PRATA           </option><option value="AGUAS DE LINDOIA         ">AGUAS DE LINDOIA         </option><option value="AGUAS DE SANTA BARBARA   ">AGUAS DE SANTA BARBARA   </option><option value="AGUAS DE SAO PEDRO       ">AGUAS DE SAO PEDRO       </option><option value="AGUDOS                   ">AGUDOS                   </option><option value="ALAMBARI                 ">ALAMBARI                 </option><option value="ALFREDO MARCONDES        ">ALFREDO MARCONDES        </option><option value="ALTAIR                   ">ALTAIR                   </option><option value="ALTINOPOLIS              ">ALTINOPOLIS              </option><option value="ALTO ALEGRE              ">ALTO ALEGRE              </option><option value="ALUMINIO                 ">ALUMINIO                 </option><option value="ALVARES FLORENCE         ">ALVARES FLORENCE         </option><option value="ALVARES MACHADO          ">ALVARES MACHADO          </option><option value="ALVARO DE CARVALHO       ">ALVARO DE CARVALHO       </option><option value="ALVINLANDIA              ">ALVINLANDIA              </option><option value="AMERICANA                ">AMERICANA                </option><option value="AMERICO BRASILIENSE      ">AMERICO BRASILIENSE      </option><option value="AMERICO DE CAMPOS        ">AMERICO DE CAMPOS        </option><option value="AMPARO                   ">AMPARO                   </option><option value="ANALANDIA                ">ANALANDIA                </option><option value="ANDRADINA                ">ANDRADINA                </option><option value="ANGATUBA                 ">ANGATUBA                 </option><option value="ANHEMBI                  ">ANHEMBI                  </option><option value="ANHUMAS                  ">ANHUMAS                  </option><option value="APARECIDA                ">APARECIDA                </option><option value="APARECIDA D'OESTE        ">APARECIDA D'OESTE        </option><option value="APIAI                    ">APIAI                    </option><option value="ARACARIGUAMA             ">ARACARIGUAMA             </option><option value="ARACATUBA                ">ARACATUBA                </option><option value="ARACOIABA DA SERRA       ">ARACOIABA DA SERRA       </option><option value="ARAMINA                  ">ARAMINA                  </option><option value="ARANDU                   ">ARANDU                   </option><option value="ARAPEI                   ">ARAPEI                   </option><option value="ARARAQUARA               ">ARARAQUARA               </option><option value="ARARAS                   ">ARARAS                   </option><option value="ARCO-IRIS                ">ARCO-IRIS                </option><option value="AREALVA                  ">AREALVA                  </option><option value="AREIAS                   ">AREIAS                   </option><option value="AREIOPOLIS               ">AREIOPOLIS               </option><option value="ARIRANHA                 ">ARIRANHA                 </option><option value="ARTUR NOGUEIRA           ">ARTUR NOGUEIRA           </option><option value="ARUJA                    ">ARUJA                    </option><option value="ASPASIA                  ">ASPASIA                  </option><option value="ASSIS                    ">ASSIS                    </option><option value="ATIBAIA                  ">ATIBAIA                  </option><option value="AURIFLAMA                ">AURIFLAMA                </option><option value="AVAI                     ">AVAI                     </option><option value="AVANHANDAVA              ">AVANHANDAVA              </option><option value="AVARE                    ">AVARE                    </option><option value="BADY BASSITT             ">BADY BASSITT             </option><option value="BALBINOS                 ">BALBINOS                 </option><option value="BALSAMO                  ">BALSAMO                  </option><option value="BANANAL                  ">BANANAL                  </option><option value="BARAO DE ANTONINA        ">BARAO DE ANTONINA        </option><option value="BARBOSA                  ">BARBOSA                  </option><option value="BARIRI                   ">BARIRI                   </option><option value="BARRA BONITA             ">BARRA BONITA             </option><option value="BARRA DO CHAPEU          ">BARRA DO CHAPEU          </option><option value="BARRA DO TURVO           ">BARRA DO TURVO           </option><option value="BARRETOS                 ">BARRETOS                 </option><option value="BARRINHA                 ">BARRINHA                 </option><option value="BARUERI                  ">BARUERI                  </option><option value="BASTOS                   ">BASTOS                   </option><option value="BATATAIS                 ">BATATAIS                 </option><option value="BAURU                    ">BAURU                    </option><option value="BEBEDOURO                ">BEBEDOURO                </option><option value="BENTO DE ABREU           ">BENTO DE ABREU           </option><option value="BERNARDINO DE CAMPOS     ">BERNARDINO DE CAMPOS     </option><option value="BERTIOGA                 ">BERTIOGA                 </option><option value="BILAC                    ">BILAC                    </option><option value="BIRIGUI                  ">BIRIGUI                  </option><option value="BIRITIBA-MIRIM           ">BIRITIBA-MIRIM           </option><option value="BOA ESPERANCA DO SUL     ">BOA ESPERANCA DO SUL     </option><option value="BOCAINA                  ">BOCAINA                  </option><option value="BOFETE                   ">BOFETE                   </option><option value="BOITUVA                  ">BOITUVA                  </option><option value="BOM JESUS DOS PERDOES    ">BOM JESUS DOS PERDOES    </option><option value="BOM SUCESSO DE ITARARE   ">BOM SUCESSO DE ITARARE   </option><option value="BORA                     ">BORA                     </option><option value="BORACEIA                 ">BORACEIA                 </option><option value="BORBOREMA                ">BORBOREMA                </option><option value="BOREBI                   ">BOREBI                   </option><option value="BOTUCATU                 ">BOTUCATU                 </option><option value="BRAGANCA PAULISTA        ">BRAGANCA PAULISTA        </option><option value="BRAUNA                   ">BRAUNA                   </option><option value="BREJO ALEGRE             ">BREJO ALEGRE             </option><option value="BRODOWSKI                ">BRODOWSKI                </option><option value="BROTAS                   ">BROTAS                   </option><option value="BURI                     ">BURI                     </option><option value="BURITAMA                 ">BURITAMA                 </option><option value="BURITIZAL                ">BURITIZAL                </option><option value="CABRALIA PAULISTA        ">CABRALIA PAULISTA        </option><option value="CABREUVA                 ">CABREUVA                 </option><option value="CACAPAVA                 ">CACAPAVA                 </option><option value="CACHOEIRA PAULISTA       ">CACHOEIRA PAULISTA       </option><option value="CACONDE                  ">CACONDE                  </option><option value="CAFELANDIA               ">CAFELANDIA               </option><option value="CAIABU                   ">CAIABU                   </option><option value="CAIEIRAS                 ">CAIEIRAS                 </option><option value="CAIUA                    ">CAIUA                    </option><option value="CAJAMAR                  ">CAJAMAR                  </option><option value="CAJATI                   ">CAJATI                   </option><option value="CAJOBI                   ">CAJOBI                   </option><option value="CAJURU                   ">CAJURU                   </option><option value="CAMPINA DO MONTE ALEGRE  ">CAMPINA DO MONTE ALEGRE  </option><option value="CAMPINAS                 ">CAMPINAS                 </option><option value="CAMPO LIMPO PAULISTA     ">CAMPO LIMPO PAULISTA     </option><option value="CAMPOS DO JORDAO         ">CAMPOS DO JORDAO         </option><option value="CAMPOS NOVOS PAULISTA    ">CAMPOS NOVOS PAULISTA    </option><option value="CANANEIA                 ">CANANEIA                 </option><option value="CANAS                    ">CANAS                    </option><option value="CANDIDO MOTA             ">CANDIDO MOTA             </option><option value="CANDIDO RODRIGUES        ">CANDIDO RODRIGUES        </option><option value="CANITAR                  ">CANITAR                  </option><option value="CAPAO BONITO             ">CAPAO BONITO             </option><option value="CAPELA DO ALTO           ">CAPELA DO ALTO           </option><option value="CAPIVARI                 ">CAPIVARI                 </option><option value="CARAGUATATUBA            ">CARAGUATATUBA            </option><option value="CARAPICUIBA              ">CARAPICUIBA              </option><option value="CARDOSO                  ">CARDOSO                  </option><option value="CASA BRANCA              ">CASA BRANCA              </option><option value="CASSIA DOS COQUEIROS     ">CASSIA DOS COQUEIROS     </option><option value="CASTILHO                 ">CASTILHO                 </option><option value="CATANDUVA                ">CATANDUVA                </option><option value="CATIGUA                  ">CATIGUA                  </option><option value="CEDRAL                   ">CEDRAL                   </option><option value="CERQUEIRA CESAR          ">CERQUEIRA CESAR          </option><option value="CERQUILHO                ">CERQUILHO                </option><option value="CESARIO LANGE            ">CESARIO LANGE            </option><option value="CHARQUEADA               ">CHARQUEADA               </option><option value="CHAVANTES                ">CHAVANTES                </option><option value="CLEMENTINA               ">CLEMENTINA               </option><option value="COLINA                   ">COLINA                   </option><option value="COLOMBIA                 ">COLOMBIA                 </option><option value="CONCHAL                  ">CONCHAL                  </option><option value="CONCHAS                  ">CONCHAS                  </option><option value="CORDEIROPOLIS            ">CORDEIROPOLIS            </option><option value="COROADOS                 ">COROADOS                 </option><option value="CORONEL MACEDO           ">CORONEL MACEDO           </option><option value="CORUMBATAI               ">CORUMBATAI               </option><option value="COSMOPOLIS               ">COSMOPOLIS               </option><option value="COSMORAMA                ">COSMORAMA                </option><option value="COTIA                    ">COTIA                    </option><option value="CRAVINHOS                ">CRAVINHOS                </option><option value="CRISTAIS PAULISTA        ">CRISTAIS PAULISTA        </option><option value="CRUZALIA                 ">CRUZALIA                 </option><option value="CRUZEIRO                 ">CRUZEIRO                 </option><option value="CUBATAO                  ">CUBATAO                  </option><option value="CUNHA                    ">CUNHA                    </option><option value="DESCALVADO               ">DESCALVADO               </option><option value="DIADEMA                  ">DIADEMA                  </option><option value="DIRCE REIS               ">DIRCE REIS               </option><option value="DIVINOLANDIA             ">DIVINOLANDIA             </option><option value="DOBRADA                  ">DOBRADA                  </option><option value="DOIS CORREGOS            ">DOIS CORREGOS            </option><option value="DOLCINOPOLIS             ">DOLCINOPOLIS             </option><option value="DOURADO                  ">DOURADO                  </option><option value="DRACENA                  ">DRACENA                  </option><option value="DUARTINA                 ">DUARTINA                 </option><option value="DUMONT                   ">DUMONT                   </option><option value="ECHAPORA                 ">ECHAPORA                 </option><option value="ELDORADO                 ">ELDORADO                 </option><option value="ELIAS FAUSTO             ">ELIAS FAUSTO             </option><option value="ELISIARIO                ">ELISIARIO                </option><option value="EMBAUBA                  ">EMBAUBA                  </option><option value="EMBU DAS ARTES           ">EMBU DAS ARTES           </option><option value="EMBU-GUACU               ">EMBU-GUACU               </option><option value="EMILIANOPOLIS            ">EMILIANOPOLIS            </option><option value="ENGENHEIRO COELHO        ">ENGENHEIRO COELHO        </option><option value="ESPIRITO SANTO DO PINHAL ">ESPIRITO SANTO DO PINHAL </option><option value="ESPIRITO SANTO DO TURVO  ">ESPIRITO SANTO DO TURVO  </option><option value="ESTIVA GERBI             ">ESTIVA GERBI             </option><option value="ESTRELA DO NORTE         ">ESTRELA DO NORTE         </option><option value="ESTRELA D'OESTE          ">ESTRELA D'OESTE          </option><option value="EUCLIDES DA CUNHA PAULIST">EUCLIDES DA CUNHA PAULIST</option><option value="FARTURA                  ">FARTURA                  </option><option value="FERNANDO PRESTES         ">FERNANDO PRESTES         </option><option value="FERNANDOPOLIS            ">FERNANDOPOLIS            </option><option value="FERNAO                   ">FERNAO                   </option><option value="FERRAZ DE VASCONCELOS    ">FERRAZ DE VASCONCELOS    </option><option value="FLORA RICA               ">FLORA RICA               </option><option value="FLOREAL                  ">FLOREAL                  </option><option value="FLORIDA PAULISTA         ">FLORIDA PAULISTA         </option><option value="FLORINIA                 ">FLORINIA                 </option><option value="FRANCA                   ">FRANCA                   </option><option value="FRANCISCO MORATO         ">FRANCISCO MORATO         </option><option value="FRANCO DA ROCHA          ">FRANCO DA ROCHA          </option><option value="GABRIEL MONTEIRO         ">GABRIEL MONTEIRO         </option><option value="GALIA                    ">GALIA                    </option><option value="GARCA                    ">GARCA                    </option><option value="GASTAO VIDIGAL           ">GASTAO VIDIGAL           </option><option value="GAVIAO PEIXOTO           ">GAVIAO PEIXOTO           </option><option value="GENERAL SALGADO          ">GENERAL SALGADO          </option><option value="GETULINA                 ">GETULINA                 </option><option value="GLICERIO                 ">GLICERIO                 </option><option value="GUAICARA                 ">GUAICARA                 </option><option value="GUAIMBE                  ">GUAIMBE                  </option><option value="GUAIRA                   ">GUAIRA                   </option><option value="GUAPIACU                 ">GUAPIACU                 </option><option value="GUAPIARA                 ">GUAPIARA                 </option><option value="GUARA                    ">GUARA                    </option><option value="GUARACAI                 ">GUARACAI                 </option><option value="GUARACI                  ">GUARACI                  </option><option value="GUARANI D'OESTE          ">GUARANI D'OESTE          </option><option value="GUARANTA                 ">GUARANTA                 </option><option value="GUARARAPES               ">GUARARAPES               </option><option value="GUARAREMA                ">GUARAREMA                </option><option value="GUARATINGUETA            ">GUARATINGUETA            </option><option value="GUAREI                   ">GUAREI                   </option><option value="GUARIBA                  ">GUARIBA                  </option><option value="GUARUJA                  ">GUARUJA                  </option><option value="GUARULHOS                ">GUARULHOS                </option><option value="GUATAPARA                ">GUATAPARA                </option><option value="GUZOLANDIA               ">GUZOLANDIA               </option><option value="HERCULANDIA              ">HERCULANDIA              </option><option value="HOLAMBRA                 ">HOLAMBRA                 </option><option value="HORTOLANDIA              ">HORTOLANDIA              </option><option value="IACANGA                  ">IACANGA                  </option><option value="IACRI                    ">IACRI                    </option><option value="IARAS                    ">IARAS                    </option><option value="IBATE                    ">IBATE                    </option><option value="IBIRA                    ">IBIRA                    </option><option value="IBIRAREMA                ">IBIRAREMA                </option><option value="IBITINGA                 ">IBITINGA                 </option><option value="IBIUNA                   ">IBIUNA                   </option><option value="ICEM                     ">ICEM                     </option><option value="IEPE                     ">IEPE                     </option><option value="IGARACU DO TIETE         ">IGARACU DO TIETE         </option><option value="IGARAPAVA                ">IGARAPAVA                </option><option value="IGARATA                  ">IGARATA                  </option><option value="IGUAPE                   ">IGUAPE                   </option><option value="ILHA COMPRIDA            ">ILHA COMPRIDA            </option><option value="ILHA SOLTEIRA            ">ILHA SOLTEIRA            </option><option value="ILHABELA                 ">ILHABELA                 </option><option value="INDAIATUBA               ">INDAIATUBA               </option><option value="INDIANA                  ">INDIANA                  </option><option value="INDIAPORA                ">INDIAPORA                </option><option value="INUBIA PAULISTA          ">INUBIA PAULISTA          </option><option value="IPAUSSU                  ">IPAUSSU                  </option><option value="IPERO                    ">IPERO                    </option><option value="IPEUNA                   ">IPEUNA                   </option><option value="IPIGUA                   ">IPIGUA                   </option><option value="IPORANGA                 ">IPORANGA                 </option><option value="IPUA                     ">IPUA                     </option><option value="IRACEMAPOLIS             ">IRACEMAPOLIS             </option><option value="IRAPUA                   ">IRAPUA                   </option><option value="IRAPURU                  ">IRAPURU                  </option><option value="ITABERA                  ">ITABERA                  </option><option value="ITAI                     ">ITAI                     </option><option value="ITAJOBI                  ">ITAJOBI                  </option><option value="ITAJU                    ">ITAJU                    </option><option value="ITANHAEM                 ">ITANHAEM                 </option><option value="ITAOCA                   ">ITAOCA                   </option><option value="ITAPECERICA DA SERRA     ">ITAPECERICA DA SERRA     </option><option value="ITAPETININGA             ">ITAPETININGA             </option><option value="ITAPEVA                  ">ITAPEVA                  </option><option value="ITAPEVI                  ">ITAPEVI                  </option><option value="ITAPIRA                  ">ITAPIRA                  </option><option value="ITAPIRAPUA PAULISTA      ">ITAPIRAPUA PAULISTA      </option><option value="ITAPOLIS                 ">ITAPOLIS                 </option><option value="ITAPORANGA               ">ITAPORANGA               </option><option value="ITAPUI                   ">ITAPUI                   </option><option value="ITAPURA                  ">ITAPURA                  </option><option value="ITAQUAQUECETUBA          ">ITAQUAQUECETUBA          </option><option value="ITARARE                  ">ITARARE                  </option><option value="ITARIRI                  ">ITARIRI                  </option><option value="ITATIBA                  ">ITATIBA                  </option><option value="ITATINGA                 ">ITATINGA                 </option><option value="ITIRAPINA                ">ITIRAPINA                </option><option value="ITIRAPUA                 ">ITIRAPUA                 </option><option value="ITOBI                    ">ITOBI                    </option><option value="ITU                      ">ITU                      </option><option value="ITUPEVA                  ">ITUPEVA                  </option><option value="ITUVERAVA                ">ITUVERAVA                </option><option value="JABORANDI                ">JABORANDI                </option><option value="JABOTICABAL              ">JABOTICABAL              </option><option value="JACAREI                  ">JACAREI                  </option><option value="JACI                     ">JACI                     </option><option value="JACUPIRANGA              ">JACUPIRANGA              </option><option value="JAGUARIUNA               ">JAGUARIUNA               </option><option value="JALES                    ">JALES                    </option><option value="JAMBEIRO                 ">JAMBEIRO                 </option><option value="JANDIRA                  ">JANDIRA                  </option><option value="JARDINOPOLIS             ">JARDINOPOLIS             </option><option value="JARINU                   ">JARINU                   </option><option value="JAU                      ">JAU                      </option><option value="JERIQUARA                ">JERIQUARA                </option><option value="JOANOPOLIS               ">JOANOPOLIS               </option><option value="JOAO RAMALHO             ">JOAO RAMALHO             </option><option value="JOSE BONIFACIO           ">JOSE BONIFACIO           </option><option value="JULIO MESQUITA           ">JULIO MESQUITA           </option><option value="JUMIRIM                  ">JUMIRIM                  </option><option value="JUNDIAI                  ">JUNDIAI                  </option><option value="JUNQUEIROPOLIS           ">JUNQUEIROPOLIS           </option><option value="JUQUIA                   ">JUQUIA                   </option><option value="JUQUITIBA                ">JUQUITIBA                </option><option value="LAGOINHA                 ">LAGOINHA                 </option><option value="LARANJAL PAULISTA        ">LARANJAL PAULISTA        </option><option value="LAVINIA                  ">LAVINIA                  </option><option value="LAVRINHAS                ">LAVRINHAS                </option><option value="LEME                     ">LEME                     </option><option value="LENCOIS PAULISTA         ">LENCOIS PAULISTA         </option><option value="LIMEIRA                  ">LIMEIRA                  </option><option value="LINDOIA                  ">LINDOIA                  </option><option value="LINS                     ">LINS                     </option><option value="LORENA                   ">LORENA                   </option><option value="LOURDES                  ">LOURDES                  </option><option value="LOUVEIRA                 ">LOUVEIRA                 </option><option value="LUCELIA                  ">LUCELIA                  </option><option value="LUCIANOPOLIS             ">LUCIANOPOLIS             </option><option value="LUIS ANTONIO             ">LUIS ANTONIO             </option><option value="LUIZIANIA                ">LUIZIANIA                </option><option value="LUPERCIO                 ">LUPERCIO                 </option><option value="LUTECIA                  ">LUTECIA                  </option><option value="MACATUBA                 ">MACATUBA                 </option><option value="MACAUBAL                 ">MACAUBAL                 </option><option value="MACEDONIA                ">MACEDONIA                </option><option value="MAGDA                    ">MAGDA                    </option><option value="MAIRINQUE                ">MAIRINQUE                </option><option value="MAIRIPORA                ">MAIRIPORA                </option><option value="MANDURI                  ">MANDURI                  </option><option value="MARABA PAULISTA          ">MARABA PAULISTA          </option><option value="MARACAI                  ">MARACAI                  </option><option value="MARAPOAMA                ">MARAPOAMA                </option><option value="MARIAPOLIS               ">MARIAPOLIS               </option><option value="MARILIA                  ">MARILIA                  </option><option value="MARINOPOLIS              ">MARINOPOLIS              </option><option value="MARTINOPOLIS             ">MARTINOPOLIS             </option><option value="MATAO                    ">MATAO                    </option><option value="MAUA                     ">MAUA                     </option><option value="MENDONCA                 ">MENDONCA                 </option><option value="MERIDIANO                ">MERIDIANO                </option><option value="MESOPOLIS                ">MESOPOLIS                </option><option value="MIGUELOPOLIS             ">MIGUELOPOLIS             </option><option value="MINEIROS DO TIETE        ">MINEIROS DO TIETE        </option><option value="MIRA ESTRELA             ">MIRA ESTRELA             </option><option value="MIRACATU                 ">MIRACATU                 </option><option value="MIRANDOPOLIS             ">MIRANDOPOLIS             </option><option value="MIRANTE DO PARANAPANEMA  ">MIRANTE DO PARANAPANEMA  </option><option value="MIRASSOL                 ">MIRASSOL                 </option><option value="MIRASSOLANDIA            ">MIRASSOLANDIA            </option><option value="MOCOCA                   ">MOCOCA                   </option><option value="MOGI DAS CRUZES          ">MOGI DAS CRUZES          </option><option value="MOGI GUACU               ">MOGI GUACU               </option><option value="MOGI MIRIM               ">MOGI MIRIM               </option><option value="MOMBUCA                  ">MOMBUCA                  </option><option value="MONCOES                  ">MONCOES                  </option><option value="MONGAGUA                 ">MONGAGUA                 </option><option value="MONTE ALEGRE DO SUL      ">MONTE ALEGRE DO SUL      </option><option value="MONTE ALTO               ">MONTE ALTO               </option><option value="MONTE APRAZIVEL          ">MONTE APRAZIVEL          </option><option value="MONTE AZUL PAULISTA      ">MONTE AZUL PAULISTA      </option><option value="MONTE CASTELO            ">MONTE CASTELO            </option><option value="MONTE MOR                ">MONTE MOR                </option><option value="MONTEIRO LOBATO          ">MONTEIRO LOBATO          </option><option value="MORRO AGUDO              ">MORRO AGUDO              </option><option value="MORUNGABA                ">MORUNGABA                </option><option value="MOTUCA                   ">MOTUCA                   </option><option value="MURUTINGA DO SUL         ">MURUTINGA DO SUL         </option><option value="NANTES                   ">NANTES                   </option><option value="NARANDIBA                ">NARANDIBA                </option><option value="NATIVIDADE DA SERRA      ">NATIVIDADE DA SERRA      </option><option value="NAZARE PAULISTA          ">NAZARE PAULISTA          </option><option value="NEVES PAULISTA           ">NEVES PAULISTA           </option><option value="NHANDEARA                ">NHANDEARA                </option><option value="NIPOA                    ">NIPOA                    </option><option value="NOVA ALIANCA             ">NOVA ALIANCA             </option><option value="NOVA CAMPINA             ">NOVA CAMPINA             </option><option value="NOVA CANAA PAULISTA      ">NOVA CANAA PAULISTA      </option><option value="NOVA CASTILHO            ">NOVA CASTILHO            </option><option value="NOVA EUROPA              ">NOVA EUROPA              </option><option value="NOVA GRANADA             ">NOVA GRANADA             </option><option value="NOVA GUATAPORANGA        ">NOVA GUATAPORANGA        </option><option value="NOVA INDEPENDENCIA       ">NOVA INDEPENDENCIA       </option><option value="NOVA LUZITANIA           ">NOVA LUZITANIA           </option><option value="NOVA ODESSA              ">NOVA ODESSA              </option><option value="NOVAIS                   ">NOVAIS                   </option><option value="NOVO HORIZONTE           ">NOVO HORIZONTE           </option><option value="NUPORANGA                ">NUPORANGA                </option><option value="OCAUCU                   ">OCAUCU                   </option><option value="OLEO                     ">OLEO                     </option><option value="OLIMPIA                  ">OLIMPIA                  </option><option value="ONDA VERDE               ">ONDA VERDE               </option><option value="ORIENTE                  ">ORIENTE                  </option><option value="ORINDIUVA                ">ORINDIUVA                </option><option value="ORLANDIA                 ">ORLANDIA                 </option><option value="OSASCO                   ">OSASCO                   </option><option value="OSCAR BRESSANE           ">OSCAR BRESSANE           </option><option value="OSVALDO CRUZ             ">OSVALDO CRUZ             </option><option value="OURINHOS                 ">OURINHOS                 </option><option value="OURO VERDE               ">OURO VERDE               </option><option value="OUROESTE                 ">OUROESTE                 </option><option value="PACAEMBU                 ">PACAEMBU                 </option><option value="PALESTINA                ">PALESTINA                </option><option value="PALMARES PAULISTA        ">PALMARES PAULISTA        </option><option value="PALMEIRA D'OESTE         ">PALMEIRA D'OESTE         </option><option value="PALMITAL                 ">PALMITAL                 </option><option value="PANORAMA                 ">PANORAMA                 </option><option value="PARAGUACU PAULISTA       ">PARAGUACU PAULISTA       </option><option value="PARAIBUNA                ">PARAIBUNA                </option><option value="PARAISO                  ">PARAISO                  </option><option value="PARANAPANEMA             ">PARANAPANEMA             </option><option value="PARANAPUA                ">PARANAPUA                </option><option value="PARAPUA                  ">PARAPUA                  </option><option value="PARDINHO                 ">PARDINHO                 </option><option value="PARIQUERA-ACU            ">PARIQUERA-ACU            </option><option value="PARISI                   ">PARISI                   </option><option value="PATROCINIO PAULISTA      ">PATROCINIO PAULISTA      </option><option value="PAULICEIA                ">PAULICEIA                </option><option value="PAULINIA                 ">PAULINIA                 </option><option value="PAULISTANIA              ">PAULISTANIA              </option><option value="PAULO DE FARIA           ">PAULO DE FARIA           </option><option value="PEDERNEIRAS              ">PEDERNEIRAS              </option><option value="PEDRA BELA               ">PEDRA BELA               </option><option value="PEDRANOPOLIS             ">PEDRANOPOLIS             </option><option value="PEDREGULHO               ">PEDREGULHO               </option><option value="PEDREIRA                 ">PEDREIRA                 </option><option value="PEDRINHAS PAULISTA       ">PEDRINHAS PAULISTA       </option><option value="PEDRO DE TOLEDO          ">PEDRO DE TOLEDO          </option><option value="PENAPOLIS                ">PENAPOLIS                </option><option value="PEREIRA BARRETO          ">PEREIRA BARRETO          </option><option value="PEREIRAS                 ">PEREIRAS                 </option><option value="PERUIBE                  ">PERUIBE                  </option><option value="PIACATU                  ">PIACATU                  </option><option value="PIEDADE                  ">PIEDADE                  </option><option value="PILAR DO SUL             ">PILAR DO SUL             </option><option value="PINDAMONHANGABA          ">PINDAMONHANGABA          </option><option value="PINDORAMA                ">PINDORAMA                </option><option value="PINHALZINHO              ">PINHALZINHO              </option><option value="PIQUEROBI                ">PIQUEROBI                </option><option value="PIQUETE                  ">PIQUETE                  </option><option value="PIRACAIA                 ">PIRACAIA                 </option><option value="PIRACICABA               ">PIRACICABA               </option><option value="PIRAJU                   ">PIRAJU                   </option><option value="PIRAJUI                  ">PIRAJUI                  </option><option value="PIRANGI                  ">PIRANGI                  </option><option value="PIRAPORA DO BOM JESUS    ">PIRAPORA DO BOM JESUS    </option><option value="PIRAPOZINHO              ">PIRAPOZINHO              </option><option value="PIRASSUNUNGA             ">PIRASSUNUNGA             </option><option value="PIRATININGA              ">PIRATININGA              </option><option value="PITANGUEIRAS             ">PITANGUEIRAS             </option><option value="PLANALTO                 ">PLANALTO                 </option><option value="PLATINA                  ">PLATINA                  </option><option value="POA                      ">POA                      </option><option value="POLONI                   ">POLONI                   </option><option value="POMPEIA                  ">POMPEIA                  </option><option value="PONGAI                   ">PONGAI                   </option><option value="PONTAL                   ">PONTAL                   </option><option value="PONTALINDA               ">PONTALINDA               </option><option value="PONTES GESTAL            ">PONTES GESTAL            </option><option value="POPULINA                 ">POPULINA                 </option><option value="PORANGABA                ">PORANGABA                </option><option value="PORTO FELIZ              ">PORTO FELIZ              </option><option value="PORTO FERREIRA           ">PORTO FERREIRA           </option><option value="POTIM                    ">POTIM                    </option><option value="POTIRENDABA              ">POTIRENDABA              </option><option value="PRACINHA                 ">PRACINHA                 </option><option value="PRADOPOLIS               ">PRADOPOLIS               </option><option value="PRAIA GRANDE             ">PRAIA GRANDE             </option><option value="PRATANIA                 ">PRATANIA                 </option><option value="PRESIDENTE ALVES         ">PRESIDENTE ALVES         </option><option value="PRESIDENTE BERNARDES     ">PRESIDENTE BERNARDES     </option><option value="PRESIDENTE EPITACIO      ">PRESIDENTE EPITACIO      </option><option value="PRESIDENTE PRUDENTE      ">PRESIDENTE PRUDENTE      </option><option value="PRESIDENTE VENCESLAU     ">PRESIDENTE VENCESLAU     </option><option value="PROMISSAO                ">PROMISSAO                </option><option value="QUADRA                   ">QUADRA                   </option><option value="QUATA                    ">QUATA                    </option><option value="QUEIROZ                  ">QUEIROZ                  </option><option value="QUELUZ                   ">QUELUZ                   </option><option value="QUINTANA                 ">QUINTANA                 </option><option value="RAFARD                   ">RAFARD                   </option><option value="RANCHARIA                ">RANCHARIA                </option><option value="REDENCAO DA SERRA        ">REDENCAO DA SERRA        </option><option value="REGENTE FEIJO            ">REGENTE FEIJO            </option><option value="REGINOPOLIS              ">REGINOPOLIS              </option><option value="REGISTRO                 ">REGISTRO                 </option><option value="RESTINGA                 ">RESTINGA                 </option><option value="RIBEIRA                  ">RIBEIRA                  </option><option value="RIBEIRAO BONITO          ">RIBEIRAO BONITO          </option><option value="RIBEIRAO BRANCO          ">RIBEIRAO BRANCO          </option><option value="RIBEIRAO CORRENTE        ">RIBEIRAO CORRENTE        </option><option value="RIBEIRAO DO SUL          ">RIBEIRAO DO SUL          </option><option value="RIBEIRAO DOS INDIOS      ">RIBEIRAO DOS INDIOS      </option><option value="RIBEIRAO GRANDE          ">RIBEIRAO GRANDE          </option><option value="RIBEIRAO PIRES           ">RIBEIRAO PIRES           </option><option value="RIBEIRAO PRETO           ">RIBEIRAO PRETO           </option><option value="RIFAINA                  ">RIFAINA                  </option><option value="RINCAO                   ">RINCAO                   </option><option value="RINOPOLIS                ">RINOPOLIS                </option><option value="RIO CLARO                ">RIO CLARO                </option><option value="RIO DAS PEDRAS           ">RIO DAS PEDRAS           </option><option value="RIO GRANDE DA SERRA      ">RIO GRANDE DA SERRA      </option><option value="RIOLANDIA                ">RIOLANDIA                </option><option value="RIVERSUL                 ">RIVERSUL                 </option><option value="ROSANA                   ">ROSANA                   </option><option value="ROSEIRA                  ">ROSEIRA                  </option><option value="RUBIACEA                 ">RUBIACEA                 </option><option value="RUBINEIA                 ">RUBINEIA                 </option><option value="SABINO                   ">SABINO                   </option><option value="SAGRES                   ">SAGRES                   </option><option value="SALES                    ">SALES                    </option><option value="SALES OLIVEIRA           ">SALES OLIVEIRA           </option><option value="SALESOPOLIS              ">SALESOPOLIS              </option><option value="SALMOURAO                ">SALMOURAO                </option><option value="SALTINHO                 ">SALTINHO                 </option><option value="SALTO                    ">SALTO                    </option><option value="SALTO DE PIRAPORA        ">SALTO DE PIRAPORA        </option><option value="SALTO GRANDE             ">SALTO GRANDE             </option><option value="SANDOVALINA              ">SANDOVALINA              </option><option value="SANTA ADELIA             ">SANTA ADELIA             </option><option value="SANTA ALBERTINA          ">SANTA ALBERTINA          </option><option value="SANTA BARBARA D'OESTE    ">SANTA BARBARA D'OESTE    </option><option value="SANTA BRANCA             ">SANTA BRANCA             </option><option value="SANTA CLARA D'OESTE      ">SANTA CLARA D'OESTE      </option><option value="SANTA CRUZ DA CONCEICAO  ">SANTA CRUZ DA CONCEICAO  </option><option value="SANTA CRUZ DA ESPERANCA  ">SANTA CRUZ DA ESPERANCA  </option><option value="SANTA CRUZ DAS PALMEIRAS ">SANTA CRUZ DAS PALMEIRAS </option><option value="SANTA CRUZ DO RIO PARDO  ">SANTA CRUZ DO RIO PARDO  </option><option value="SANTA ERNESTINA          ">SANTA ERNESTINA          </option><option value="SANTA FE DO SUL          ">SANTA FE DO SUL          </option><option value="SANTA GERTRUDES          ">SANTA GERTRUDES          </option><option value="SANTA ISABEL             ">SANTA ISABEL             </option><option value="SANTA LUCIA              ">SANTA LUCIA              </option><option value="SANTA MARIA DA SERRA     ">SANTA MARIA DA SERRA     </option><option value="SANTA MERCEDES           ">SANTA MERCEDES           </option><option value="SANTA RITA DO PASSA QUATR">SANTA RITA DO PASSA QUATR</option><option value="SANTA RITA D'OESTE       ">SANTA RITA D'OESTE       </option><option value="SANTA ROSA DE VITERBO    ">SANTA ROSA DE VITERBO    </option><option value="SANTA SALETE             ">SANTA SALETE             </option><option value="SANTANA DA PONTE PENSA   ">SANTANA DA PONTE PENSA   </option><option value="SANTANA DE PARNAIBA      ">SANTANA DE PARNAIBA      </option><option value="SANTO ANASTACIO          ">SANTO ANASTACIO          </option><option value="SANTO ANDRE              ">SANTO ANDRE              </option><option value="SANTO ANTONIO DA ALEGRIA ">SANTO ANTONIO DA ALEGRIA </option><option value="SANTO ANTONIO DE POSSE   ">SANTO ANTONIO DE POSSE   </option><option value="SANTO ANTONIO DO ARACANGU">SANTO ANTONIO DO ARACANGU</option><option value="SANTO ANTONIO DO JARDIM  ">SANTO ANTONIO DO JARDIM  </option><option value="SANTO ANTONIO DO PINHAL  ">SANTO ANTONIO DO PINHAL  </option><option value="SANTO EXPEDITO           ">SANTO EXPEDITO           </option><option value="SANTOPOLIS DO AGUAPEI    ">SANTOPOLIS DO AGUAPEI    </option><option value="SANTOS                   ">SANTOS                   </option><option value="SAO BENTO DO SAPUCAI     ">SAO BENTO DO SAPUCAI     </option><option value="SAO BERNARDO DO CAMPO    ">SAO BERNARDO DO CAMPO    </option><option value="SAO CAETANO DO SUL       ">SAO CAETANO DO SUL       </option><option value="SAO CARLOS               ">SAO CARLOS               </option><option value="SAO FRANCISCO            ">SAO FRANCISCO            </option><option value="SAO JOAO DA BOA VISTA    ">SAO JOAO DA BOA VISTA    </option><option value="SAO JOAO DAS DUAS PONTES ">SAO JOAO DAS DUAS PONTES </option><option value="SAO JOAO DE IRACEMA      ">SAO JOAO DE IRACEMA      </option><option value="SAO JOAO DO PAU D'ALHO   ">SAO JOAO DO PAU D'ALHO   </option><option value="SAO JOAQUIM DA BARRA     ">SAO JOAQUIM DA BARRA     </option><option value="SAO JOSE DA BELA VISTA   ">SAO JOSE DA BELA VISTA   </option><option value="SAO JOSE DO BARREIRO     ">SAO JOSE DO BARREIRO     </option><option value="SAO JOSE DO RIO PARDO    ">SAO JOSE DO RIO PARDO    </option><option value="SAO JOSE DO RIO PRETO    ">SAO JOSE DO RIO PRETO    </option><option value="SAO JOSE DOS CAMPOS      ">SAO JOSE DOS CAMPOS      </option><option value="SAO LOURENCO DA SERRA    ">SAO LOURENCO DA SERRA    </option><option value="SAO LUIZ DO PARAITINGA   ">SAO LUIZ DO PARAITINGA   </option><option value="SAO MANUEL               ">SAO MANUEL               </option><option value="SAO MIGUEL ARCANJO       ">SAO MIGUEL ARCANJO       </option><option value="SAO PAULO                ">SAO PAULO                </option><option value="SAO PEDRO                ">SAO PEDRO                </option><option value="SAO PEDRO DO TURVO       ">SAO PEDRO DO TURVO       </option><option value="SAO ROQUE                ">SAO ROQUE                </option><option value="SAO SEBASTIAO            ">SAO SEBASTIAO            </option><option value="SAO SEBASTIAO DA GRAMA   ">SAO SEBASTIAO DA GRAMA   </option><option value="SAO SIMAO                ">SAO SIMAO                </option><option value="SAO VICENTE              ">SAO VICENTE              </option><option value="SARAPUI                  ">SARAPUI                  </option><option value="SARUTAIA                 ">SARUTAIA                 </option><option value="SEBASTIANOPOLIS DO SUL   ">SEBASTIANOPOLIS DO SUL   </option><option value="SERRA AZUL               ">SERRA AZUL               </option><option value="SERRA NEGRA              ">SERRA NEGRA              </option><option value="SERRANA                  ">SERRANA                  </option><option value="SERTAOZINHO              ">SERTAOZINHO              </option><option value="SETE BARRAS              ">SETE BARRAS              </option><option value="SEVERINIA                ">SEVERINIA                </option><option value="SILVEIRAS                ">SILVEIRAS                </option><option value="SOCORRO                  ">SOCORRO                  </option><option value="SOROCABA                 ">SOROCABA                 </option><option value="SUD MENNUCCI             ">SUD MENNUCCI             </option><option value="SUMARE                   ">SUMARE                   </option><option value="SUZANAPOLIS              ">SUZANAPOLIS              </option><option value="SUZANO                   ">SUZANO                   </option><option value="TABAPUA                  ">TABAPUA                  </option><option value="TABATINGA                ">TABATINGA                </option><option value="TABOAO DA SERRA          ">TABOAO DA SERRA          </option><option value="TACIBA                   ">TACIBA                   </option><option value="TAGUAI                   ">TAGUAI                   </option><option value="TAIACU                   ">TAIACU                   </option><option value="TAIUVA                   ">TAIUVA                   </option><option value="TAMBAU                   ">TAMBAU                   </option><option value="TANABI                   ">TANABI                   </option><option value="TAPIRAI                  ">TAPIRAI                  </option><option value="TAPIRATIBA               ">TAPIRATIBA               </option><option value="TAQUARAL                 ">TAQUARAL                 </option><option value="TAQUARITINGA             ">TAQUARITINGA             </option><option value="TAQUARITUBA              ">TAQUARITUBA              </option><option value="TAQUARIVAI               ">TAQUARIVAI               </option><option value="TARABAI                  ">TARABAI                  </option><option value="TARUMA                   ">TARUMA                   </option><option value="TATUI                    ">TATUI                    </option><option value="TAUBATE                  ">TAUBATE                  </option><option value="TEJUPA                   ">TEJUPA                   </option><option value="TEODORO SAMPAIO          ">TEODORO SAMPAIO          </option><option value="TERRA ROXA               ">TERRA ROXA               </option><option value="TIETE                    ">TIETE                    </option><option value="TIMBURI                  ">TIMBURI                  </option><option value="TORRE DE PEDRA           ">TORRE DE PEDRA           </option><option value="TORRINHA                 ">TORRINHA                 </option><option value="TRABIJU                  ">TRABIJU                  </option><option value="TREMEMBE                 ">TREMEMBE                 </option><option value="TRES FRONTEIRAS          ">TRES FRONTEIRAS          </option><option value="TUIUTI                   ">TUIUTI                   </option><option value="TUPA                     ">TUPA                     </option><option value="TUPI PAULISTA            ">TUPI PAULISTA            </option><option value="TURIUBA                  ">TURIUBA                  </option><option value="TURMALINA                ">TURMALINA                </option><option value="UBARANA                  ">UBARANA                  </option><option value="UBATUBA                  ">UBATUBA                  </option><option value="UBIRAJARA                ">UBIRAJARA                </option><option value="UCHOA                    ">UCHOA                    </option><option value="UNIAO PAULISTA           ">UNIAO PAULISTA           </option><option value="URANIA                   ">URANIA                   </option><option value="URU                      ">URU                      </option><option value="URUPES                   ">URUPES                   </option><option value="VALENTIM GENTIL          ">VALENTIM GENTIL          </option><option value="VALINHOS                 ">VALINHOS                 </option><option value="VALPARAISO               ">VALPARAISO               </option><option value="VARGEM                   ">VARGEM                   </option><option value="VARGEM GRANDE DO SUL     ">VARGEM GRANDE DO SUL     </option><option value="VARGEM GRANDE PAULISTA   ">VARGEM GRANDE PAULISTA   </option><option value="VARZEA PAULISTA          ">VARZEA PAULISTA          </option><option value="VERA CRUZ                ">VERA CRUZ                </option><option value="VINHEDO                  ">VINHEDO                  </option><option value="VIRADOURO                ">VIRADOURO                </option><option value="VISTA ALEGRE DO ALTO     ">VISTA ALEGRE DO ALTO     </option><option value="VITORIA BRASIL           ">VITORIA BRASIL           </option><option value="VOTORANTIM               ">VOTORANTIM               </option><option value="VOTUPORANGA              ">VOTUPORANGA              </option><option value="ZACARIAS                 ">ZACARIAS                 </option></select></label>
+</span> 
+<span>
+<label>Bairro: <br /><select name="bairroAgencia" id="bairroAgencia" class="f6col">
+<option value=""></option></select></label>
+</span> 
+</div>
+<!-- SE SERVIÇO -->
+<div class="separator"></div>
+<div id="divServico" style="display: none;">
+<div class="div8col"> 
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Atendimento</legend>
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="sabado" />Sábado</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="domingo" />Domingo</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="plantao" />Plantão</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="bancopostal" />Banco Postal </label>  
+
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="certificado" />Cert. Digital </label>
+
+</fieldset>
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Horário</legend>
+<select style="width: 60px;" id="selHorario" name="selHorario">
+<option>
+</option><option value="0000">00:00</option>
+<option value="0100">01:00</option>
+<option value="0200">02:00</option>
+<option value="0300">03:00</option>
+<option value="0400">04:00</option>
+<option value="0500">05:00</option>
+<option value="0600">06:00</option>
+<option value="0700">07:00</option>
+<option value="0800">08:00</option>
+<option value="0900">09:00</option>
+<option value="1000">10:00</option>
+<option value="1100">11:00</option>
+<option value="1200">12:00</option>
+<option value="1300">13:00</option>
+<option value="1400">14:00</option>
+<option value="1500">15:00</option>
+<option value="1600">16:00</option>
+<option value="1700">17:00</option>
+<option value="1800">18:00</option>
+<option value="1900">19:00</option>
+<option value="2000">20:00</option>
+<option value="2100">21:00</option>
+<option value="2200">22:00</option>
+<option value="2300">23:00</option>
+</select>
+</fieldset>  <br />
+<br />
+</div>
+</div>
+<div class="separator"></div>
+<div id="divBotaoBuscar" class="btnform" style="display: none;">
+<input id="submit" type="button" value="Pesquisar" onclick="codeAddress()" class="btn2 float-right" />
+</div>
+</div>
+<!-- contentform -->
+</div>
+<!-- form -->
+</form>
+
+<div class="resultadoAgencia">
+<div id="divDetalheAgencia" style="width: 100%; display: block;"></div>
+</div>
+<div id="imgPesquisaMap" style="display:none;text-align: center;">
+<img src="home2014/img/loading2.gif" />
+</div>
+<div class="resultadoAgencia" id="map" style="height: 300px; width: 470px; display: none;">
+</div>
+<script src="sistemas/agencias/js/jsAgencia.js?versao=1.2" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine-pt.js" type="text/javascript"></script>	
+<script src="sistemas/agencias/js/jsMaps.js?versao=1.14" type="text/javascript"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASBQIKouehHj8AMNWp4MZgJrYju876Qcc&amp;signed_in=true&amp;callback=initMap&amp;v=3.21" async="" defer=""></script>
+
+</div>
+</div>
+</div>
+<br class="clr" />
+</div>
+</div>
+</div>
+</div><!-- class="wrap" -->
+<!-- laminas -->
+<div class="footer">
+  <div class="wrap">
+    
+      <div class="column-footer">
+        <h3><a href="sistemas/falecomoscorreios">Fale com os Correios</a></h3>
+        <ul>
+          <li class="node"><a href="sistemas/falecomoscorreios">Manifestação via Internet</a>
+            <ul>
+              <li><a href="sistemas/falecomoscorreios">Fale Conosco pelo site</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/falecomoscorreios">Atendimento telefônico</a>
+            <ul>
+              <li>3003 0100 (Capitais e Região Metropolitanas)</li>
+              <li>0800 725 7282 (Demais localidades)</li>
+              <li>0800 725 0100 (Sugestões ou reclamações)</li>
+              <li>0800 725 0898 (exclusivo para portadores <br />
+                de deficiência auditiva) </li>
+              <li>3003 1383 (Informações Banco Postal)</li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/agencias/">Rede de atendimento</a>
+            <ul>
+              <li><a href="sistemas/agencias">Consulte endereços e horários de atendimentos <br />
+                das agências dos Correios</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/ouvidoria">Ouvidoria</a> </li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Portal Correios</a></h3>
+        <ul>
+          <li><a href="http://www.correios.com.br/sitemap">Mapa do site</a></li>
+          <li><a href="sistemas/rastreamento/default.cfm">Rastreamento de objetos</a></li>
+          
+          <li><a href="http://www.mc.gov.br/">Ministério das Comunicações</a></li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Outros sites dos Correios</a></h3>
+        <ul>
+          
+          <li><a href="http://shopping.correios.com.br/correiosonline">Loja virtual dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/correios">Blog dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/filatelia">Espaço da Filatelia</a></li>
+          <li><a href="http://m.correios.com.br/">Correios Mobile</a></li>
+          <li><a href="http://www2.correios.com.br/">Sistemas dos Correios</a></li>
+        </ul>
+      </div>
+      <div class="copy"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/politica-de-privacidade-e-notas-legais/">Política de Privacidade e notas legais</a> -  © Copyright  2014 Correios - Todos os direitos reservados. </div>
+      
+  </div>
+  
+</div>
+ 
+</div>
+<!-- class="back" -->
+
+<script type="text/javascript">
+
+ddaccordion.init({
+	headerclass: "expo", //Shared CSS class name of headers group
+	contentclass: "dados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+	}
+})
+
+ddaccordion.init({
+	headerclass: "abarotulo", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			
+	}
+})
+
+
+/*Agencias*/
+ddaccordion.init({
+	headerclass: "expodados", //Shared CSS class name of headers group
+	contentclass: "contentexpodados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function iconeAbaMouseOut(){
+	$('ul.iconeaba').mouseleave(function() {
+		ddaccordion.collapseall('abarotulo');
+	});	
+}
+function produtosAZMouseOut(){
+	$('div.produtosaz').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+function produtosAZtrocaMostraTudo(){
+	$('#abreTudo').css('display','block');
+	$('#abreFecha a').click(function() {
+		$("#abreFecha a").toggle();
+	});	
+}
+
+function cbDivMouseOut(){
+	$('div.cbDiv').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+$(document).ready(function(){
+	iconeAbaMouseOut();
+	produtosAZMouseOut();
+	produtosAZtrocaMostraTudo();
+	cbDivMouseOut();
+	
+});
+
+
+</script><style type="text/css">
+.dados{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.submenu{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.contentexpodados{display: none}
+a.hiddenajaxlink{display: none}
+</style> <script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#nav a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent", // the class of the content you are hiding until the tab is clicked
+			//showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: 1, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+</script> 		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".inline2").colorbox({inline:true, width:"340px"});
+				$(".inline3").colorbox({inline:true, width:"70%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-564464-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-564464-1');
+</script>
+
+
+
+ 
+
+<!-- contentobjects: page generated at 2017-09-22 11:15 AM -->
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 20px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

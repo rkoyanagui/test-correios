@@ -115,4 +115,14 @@ public class StepDefinition {
 	public void sistema_apresenta_resultado_busca_agencia(String resultado) throws Throwable {
 	    stepB.validarTelaResultadoBuscaAgencia(resultado);
 	}
+	
+	@When("^clico no botao \"([^\"]*)\"$")
+	public void clico_no_botao(String botao) throws Throwable {
+	    stepB.clicarBotao(botao);
+	}
+	
+	@Then("^sistema apresenta a tela \"([^\"]*)\"$")
+	public void sistema_apresenta_a_tela(String tituloTela1) throws Throwable {
+	    stepB.validarTitulo(tituloTela1);
+	}
 }

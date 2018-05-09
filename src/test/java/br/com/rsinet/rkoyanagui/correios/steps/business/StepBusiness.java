@@ -2,6 +2,7 @@ package br.com.rsinet.rkoyanagui.correios.steps.business;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -121,13 +122,29 @@ public class StepBusiness {
 	}
 	
 	public void preencherMunicipio(String municipio) throws InterruptedException {
-		viewElement.wait(10);
+		Thread.sleep(10000);
+		//viewElement.waitForElementIsPresent(10, page.getMunicipio(municipio));
+		//viewElement.clickAndWait(page.getMunicipio(municipio), 5);
 		viewElement.selectByVisibleText(page.getMunicipio(), municipio);
 	}
 	
-	public void validarTelaResultadoBuscaAgencia(String arg1) {
-		viewElement.waitForElementIsPresent(20, page.getResultadoBuscaAgencia());
+	public void validarTelaResultadoBuscaAgencia(String nomeAgencia) {
+		viewElement.waitForElementIsPresent(20, page.getResultadoBuscaAgencia(nomeAgencia));
 		LOG.info(">> " + page.getResultadoBuscaAgencia().getText());
-		Assert.assertEquals(arg1, page.getResultadoBuscaAgencia().getText());
+		//Assert.assertEquals("(([^\"]*)(" + nomeAgencia + ")([^\"]*))",
+		//		page.getResultadoBuscaAgencia(nomeAgencia).getText());
+		Assert.assertTrue(Pattern.matches(
+				"(([^\"]*)(" + nomeAgencia + ")([^\"]*))",
+				page.getResultadoBuscaAgencia(nomeAgencia).getText()));
+	}
+	
+	public void clicarBotao(String botao) {
+		viewElement.clickAndWait(5, page.getBotao(botao));
+	}
+	
+	public void validarTitulo(String titulo) {
+		viewElement.waitForElementIsPresent(10, page.getHeader(titulo));
+		LOG.info(">> " + page.getHeader(titulo).getText());
+		Assert.assertEquals(titulo, page.getHeader(titulo).getText());
 	}
 }
