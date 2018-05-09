@@ -1,0 +1,660 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class=" js"><head><meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">/* &lt;![CDATA[ */_cf_loadingtexthtml="&lt;img alt=' ' src='/cfscripts/ajax/resources/cf/images/loading.gif'/&gt;";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cfscripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=8578;
+_cf_flash_policy_port=1244;
+_cf_clientid='6BD14D4EDDAA49F76FA0C87D25C24F84';/* ]]&gt; */</script><script type="text/javascript" src="/cfscripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/package/cfajax.js"></script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	var _cf_cfcAgencia=ColdFusion.AjaxProxy.init('/sistemas/agencias/cfc/cfcAgencia.cfc','ProxyAjax');
+	_cf_cfcAgencia.prototype.getAgenciasProximas=function(latitude,longitude) { return ColdFusion.AjaxProxy.invoke(this, "getAgenciasProximas","73B18D4EA85789AD", {latitude:latitude,longitude:longitude});};
+	_cf_cfcAgencia.prototype.getBairro=function(UF,municipio) { return ColdFusion.AjaxProxy.invoke(this, "getBairro","73B18D4EA85789AD", {UF:UF,municipio:municipio});};
+	_cf_cfcAgencia.prototype.getUF=function() { return ColdFusion.AjaxProxy.invoke(this, "getUF","73B18D4EA85789AD", {});};
+	_cf_cfcAgencia.prototype.getMunicipio=function(UF) { return ColdFusion.AjaxProxy.invoke(this, "getMunicipio","73B18D4EA85789AD", {UF:UF});};
+/* ]]&gt; */</script>
+<script type="text/javascript" src="/cfscripts/cfform.js"></script>
+<script type="text/javascript" src="/cfscripts/masks.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+<meta http-equiv="Content-Language" content="pt" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>home</title>
+<meta name="description" content="[page]" />
+<meta name="keywords" content="" />
+<script type="text/javascript"> 
+pageid = '09EEC128-5056-9163-892E41DCA59EAEC9'; 
+</script>
+<noscript>
+&lt;p&gt;identificador da pÃ¡gina&lt;/p&gt;
+</noscript>
+<base href="http://www2.correios.com.br/" /> 
+<link rel="icon" href="home2014/img/icon.png" type="image/gif" />
+
+<!-- scripts --><noscript>&lt;p&gt;Biblioteca de efeitos&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-1.6.2.min.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para menus&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/ddaccordion.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para tabbes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jtabber.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos colorbox&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery.colorbox-min.js"></script>
+   <noscript>&lt;p&gt;Biblioteca de validação de formulários&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/validations.js"></script>
+
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>
+  <script type="text/javascript" src="home2014/js/scripts.js"></script>
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>   
+  <script type="text/javascript" src="home2014/js/cookie.js"></script>
+    <noscript>&lt;p&gt;&lt;/p&gt;Script Javascript</noscript>   
+<script type="text/javascript">document.documentElement.className += " js";</script>
+  <noscript>&lt;p&gt;Controle de abas&lt;/p&gt;</noscript>
+ <noscript>&lt;p&gt;Biblioteca de animações&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-ui-1.8.16.custom.min.js">
+  </script>  
+   <script type="text/javascript">
+   jQuery(function($){
+        $.datepicker.regional['pt-BR'] = {
+                closeText: 'Fechar',
+                prevText: '&amp;#x3c;Anterior',
+                nextText: 'Pr&amp;oacute;ximo&amp;#x3e;',
+                currentText: 'Hoje',
+                monthNames: ['Janeiro','Fevereiro','Mar&amp;ccedil;o','Abril','Maio','Junho',
+                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+                'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda-feira','Ter&amp;ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+});
+</script>
+  
+    
+
+<!-- /scripts -->
+
+<!-- CSS -->
+
+  <link href="home2014/css/layout.css" rel="stylesheet" type="text/css" />
+<!-- /CSS --->
+ 
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1252490004059943=function()
+	{
+		ColdFusion.Bind.register([],{'bindTo':'estadoAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getUF','_cf_ajaxproxytoken':'73B18D4EA85789AD','bindExpr':[]},ColdFusion.Bind.cfcBindHandler,true);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1252490004059943);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1252490004059944=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change']],{'bindTo':'municipioAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getMunicipio','_cf_ajaxproxytoken':'73B18D4EA85789AD','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1252490004059944);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1252490004059945=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change'],['municipioAgencia','formBuscaAgencia','change']],{'bindTo':'bairroAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getBairro','_cf_ajaxproxytoken':'73B18D4EA85789AD','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value'],['MUNICIPIO','municipioAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1252490004059945);
+/* ]]&gt; */</script>
+<script type="text/javascript">
+&lt;!--
+    _CF_checkformBuscaAgencia = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length &gt; 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//--&gt;
+</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFDIV');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_1252490004059946=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','','change'],['municipioAgencia','','change'],['bairroAgencia','','change'],['selHorario','','change'],['ckbAtendimento','','change']],{'bindTo':'divDetalheAgencia','bindExpr':['sistemas/agencias/inc/divDetalheAgencia.cfm?uf=',['estadoAgencia','','value'],'&amp;municipio=',['municipioAgencia','','value'],'&amp;bairro=',['bairroAgencia','','value'],'&amp;horario=',['selHorario','','value'],'&amp;atendimento=',['ckbAtendimento','','value']]},ColdFusion.Bind.urlBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_1252490004059946);
+/* ]]&gt; */</script>
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/geocoder.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/30/13a/intl/pt_br/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Fwww2.correios.com.br%2Fsistemas%2Fagencias%2F&amp;4sAIzaSyASBQIKouehHj8AMNWp4MZgJrYju876Qcc&amp;callback=_xdc_._m3168a&amp;token=16608"></script></head>
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  <body><span></span>             <!--<![endif]-->
+<div class="back">
+
+<div class="acessibilidade">
+  <div class="wrap">
+    <ul>
+      
+        <li class="tocontent"> <span class="separator-bar"> </span> <a href="javascript:void(0);" onclick="document.location.hash='ancora';" title="Ir para o conteúdo principal da página">Ir ao  conteúdo</a> </li>
+        <li class="font-plus" id="biggerFont"> <a href="javascript:void(0);" title="Aumentar o tamanho da fonte do texto">A</a> </li>
+        <li id="defaultFont"> <span class="separator-dot"> </span> <a href="javascript:void(0);" title="Retornar a fonte do texto para tamanho padrão">Tamanho padrão</a> <span class="separator-dot"> </span> </li>
+        <li class="font-minus" id="smallerFont"> <a href="javascript:void(0);" title="Diminuir o tamanho da fonte do texto">A</a> </li>
+        <li class="contrast" id="contrast"> <span class="separator-bar"> </span> <a href="javascript:void(0);" title="Modificar para o modo de alto contraste">Contraste</a> <span class="separator-bar"> </span> </li>
+        <li> <span class="separator-bar"> </span> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/">Teclado Virtual</a> </li>
+        <li> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/" id="txt-headmouse">Headmouse</a></li>
+        
+    </ul>
+  </div>
+</div>
+ 
+<!-- header --->
+
+
+<div class="header">
+<h1 class="logo float-left"> <a href="http://www.correios.com.br" title="Ir para a página incial" alt="Logo Correios"><img src="home2014/img/layout/logo.png" alt="Ir para a página inicial" title="Ir para a página incial" /></a> </h1>
+<div class="acesso_rapido">
+
+  <div class="text-right">
+    
+    <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/fc">Fale com os Correios</a><br />
+  </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="0h">Outros sites</div>
+    <span class="dados abaaz" contentindex="0c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Acesse a outros sites dos Correios</span><br />
+      
+      <a href="produtosaz/default.cfm?filtro=R/Z"><b>Espaço da Filatelia</b></a><br />
+      <a href="http://blog.correios.com.br/correios"><b>Blog Institucional do Correios</b></a><br />
+      <a href="http://m.correios.com.br"><b>Correios mobile</b></a><br />
+    </div>
+    </span> </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="1h">Correios de A a Z</div>
+    <span class="dados abaaz" contentindex="1c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos.<br />
+      </span><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1"><b>Todos os itens</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z?filtro=abc"><b>Correios de A-C</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=def"><b>Correios de D-F</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=ghijklmnopq"><b>Correios de G-Q</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=rstuvwxyz"><b>Correios de R-Z</b></a> </div>
+    </span> </div>
+  </div>
+  <!-- acesso rápido -->
+  <br class="clr" />
+  </div>
+  <div class="tabs">
+  
+  <div class="wrap">
+    <ul class="tabs-list">
+      
+      <li class="current"> <a href="default.cfm">
+        <h2>Sistemas</h2>
+        </a> </li>
+    </ul>
+  </div>
+   
+<!-- /header --->
+<div class="wrap">   
+<div class="content">
+<div class="laminas" style="display: block;">
+<div class="column1">
+<span class="mver"> 
+<span class="dominio"></span>
+<h3>Sistemas</h3>
+<ul>
+  <li><a href="sistemas/agencias/">Busca agências</a></li>
+</ul> 
+</span>
+<!-- Fim Menu vertical -->
+</div>
+<!-- column1 -->
+<div class="column2">
+<div class="breadcrumb"></div>
+<div class="content  trescolunas">
+<a name="ancora"></a>
+
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/cssAgencia.css" />
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/validationEngine.jquery.css" />
+<div class="tituloimagem"><h3>Agências</h3> </div>
+<div class="quadroavisos">
+<p><strong>Restrição de acesso em Agências dos Correios</strong></p>
+<p>Agências localizadas dentro de prédios de terceiros, nos quais os Correios não possuem ingerências, podem possuir regras específicas para acesso, que deverão ser atendidas pelo cliente.</p>
+<p>A seguir, listamos algumas agências que possuem esta restrição:</p>
+<p>Distrito Federal:<br />- AC Palácio do Planalto<br />- AC Quartel General do Exército<br />- AC STF<br />- AC STJ<br />- AC TCU </p>
+<p>Minas Gerais<br />- AC CENIBRA<br />- AC FIAT<br />- AC Jaraguá</p>
+<p>Rio de Janeiro<br />
+- AC Academia Militar das Agulhas Negras<br />- AC Afonso Cavalcanti<br />- AC Fundação Osvaldo Cruz<br />- AC Ilha do Mocangue<br />- AC Marcílio Dias<br />- AC Petrobrás<br />- AC REDUC<br />- AC Ten. Fábio Magalhães</p>
+</div>
+<div class="ctrlcontent">  
+
+<p>Através de sua rede de agências, os Correios prestam serviços aos seus clientes, proporcionando o acesso ao atendimento postal e a outros serviços que trazem benefícios e conveniência.</p>
+<form name="formBuscaAgencia" id="formBuscaAgencia" action="/sistemas/agencias/Default.cfm" method="post" onsubmit="return _CF_checkformBuscaAgencia(this)">
+<input type="Hidden" name="coordenadaEndereco" id="coordenadaEndereco" value="" />
+<div class="form">
+<div class="contentform">
+<h4>Buscar agência por:</h4>
+<div class="div8col"> 
+<span class="f2col">
+<label>
+<input type="radio" value="P" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('P'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Proximidade </label>
+</span><span class="f2col">
+<label>
+<input type="radio" value="L" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('L'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Localidade</label>
+</span> <span class="f2col">
+<label>
+<input type="radio" value="S" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('S'); jQuery('#formBuscaAgencia').validationEngine('hide');" />
+Serviço</label>
+</span>
+</div>
+<!--SE PROXIMIDADE  -->
+<div id="divProximidade">
+<div class="separator-line"></div>
+<span>
+<label>Digite endereço de onde você está procurando <br />
+<input id="cepEndereco" name="cepEndereco" type="textbox" value="Guará, Brasília" style="width: 447px;" class="f8col text-input" />
+</label>
+</span> </div>
+<!-- SE LOCALIDADE -->
+<div class="separator"></div>
+<div id="divLocalidade">
+<p class="dica dicarotulo">O campos assinalados com (*) são obrigatórios</p>
+<span>
+<label>Estado *: <br /><select name="estadoAgencia" id="estadoAgencia" class="f3col validate[required]">
+<option value=""></option><option value="AC">ACRE</option><option value="AL">ALAGOAS</option><option value="AP">AMAPÁ</option><option value="AM">AMAZONAS</option><option value="BA">BAHIA</option><option value="CE">CEARÁ</option><option value="DF">DISTRITO FEDERAL</option><option value="ES">ESPÍRITO SANTO</option><option value="GO">GOIÁS</option><option value="MA">MARANHÃO</option><option value="MG">MINAS GERAIS</option><option value="MS">MATO GROSSO DO SUL</option><option value="MT">MATO GROSSO</option><option value="PA">PARÁ</option><option value="PB">PARAÍBA</option><option value="PE">PERNAMBUCO</option><option value="PI">PIAUÍ</option><option value="PR">PARANÁ</option><option value="RJ">RIO DE JANEIRO</option><option value="RN">RIO GRANDE DO NORTE</option><option value="RO">RONDÔNIA</option><option value="RR">RORAIMA</option><option value="RS">RIO GRANDE DO SUL</option><option value="SC">SANTA CATARINA</option><option value="SE">SERGIPE</option><option value="SP">SÃO PAULO</option><option value="TO">TOCANTINS</option></select></label>
+</span> 
+<span>
+<label>Município *: <br /><select name="municipioAgencia" id="municipioAgencia" class="f5col validate[required]">
+<option value=""></option></select></label>
+</span> 
+<span>
+<label>Bairro: <br /><select name="bairroAgencia" id="bairroAgencia" class="f6col">
+<option value=""></option></select></label>
+</span> 
+</div>
+<!-- SE SERVIÇO -->
+<div class="separator"></div>
+<div id="divServico">
+<div class="div8col"> 
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Atendimento</legend>
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="sabado" />Sábado</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="domingo" />Domingo</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="plantao" />Plantão</label>  
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="bancopostal" />Banco Postal </label>  
+
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="certificado" />Cert. Digital </label>
+
+</fieldset>
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Horário</legend>
+<select style="width: 60px;" id="selHorario" name="selHorario">
+<option>
+</option><option value="0000">00:00</option>
+<option value="0100">01:00</option>
+<option value="0200">02:00</option>
+<option value="0300">03:00</option>
+<option value="0400">04:00</option>
+<option value="0500">05:00</option>
+<option value="0600">06:00</option>
+<option value="0700">07:00</option>
+<option value="0800">08:00</option>
+<option value="0900">09:00</option>
+<option value="1000">10:00</option>
+<option value="1100">11:00</option>
+<option value="1200">12:00</option>
+<option value="1300">13:00</option>
+<option value="1400">14:00</option>
+<option value="1500">15:00</option>
+<option value="1600">16:00</option>
+<option value="1700">17:00</option>
+<option value="1800">18:00</option>
+<option value="1900">19:00</option>
+<option value="2000">20:00</option>
+<option value="2100">21:00</option>
+<option value="2200">22:00</option>
+<option value="2300">23:00</option>
+</select>
+</fieldset>  <br />
+<br />
+</div>
+</div>
+<div class="separator"></div>
+<div id="divBotaoBuscar" class="btnform">
+<input id="submit" type="button" value="Pesquisar" onclick="codeAddress()" class="btn2 float-right" />
+</div>
+</div>
+<!-- contentform -->
+</div>
+<!-- form -->
+</form>
+
+<div class="resultadoAgencia">
+<div id="divDetalheAgencia" style="width:100%;"></div>
+</div>
+<div id="imgPesquisaMap" style="display:none;text-align: center;">
+<img src="home2014/img/loading2.gif" />
+</div>
+<div class="resultadoAgencia" id="map" style="height: 300px; width: 470px;">
+</div>
+<script src="sistemas/agencias/js/jsAgencia.js?versao=1.2" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine-pt.js" type="text/javascript"></script>	
+<script src="sistemas/agencias/js/jsMaps.js?versao=1.14" type="text/javascript"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASBQIKouehHj8AMNWp4MZgJrYju876Qcc&amp;signed_in=true&amp;callback=initMap&amp;v=3.21" async="" defer=""></script>
+
+</div>
+</div>
+</div>
+<br class="clr" />
+</div>
+</div>
+</div>
+</div><!-- class="wrap" -->
+<!-- laminas -->
+<div class="footer">
+  <div class="wrap">
+    
+      <div class="column-footer">
+        <h3><a href="sistemas/falecomoscorreios">Fale com os Correios</a></h3>
+        <ul>
+          <li class="node"><a href="sistemas/falecomoscorreios">Manifestação via Internet</a>
+            <ul>
+              <li><a href="sistemas/falecomoscorreios">Fale Conosco pelo site</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/falecomoscorreios">Atendimento telefônico</a>
+            <ul>
+              <li>3003 0100 (Capitais e Região Metropolitanas)</li>
+              <li>0800 725 7282 (Demais localidades)</li>
+              <li>0800 725 0100 (Sugestões ou reclamações)</li>
+              <li>0800 725 0898 (exclusivo para portadores <br />
+                de deficiência auditiva) </li>
+              <li>3003 1383 (Informações Banco Postal)</li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/agencias/">Rede de atendimento</a>
+            <ul>
+              <li><a href="sistemas/agencias">Consulte endereços e horários de atendimentos <br />
+                das agências dos Correios</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/ouvidoria">Ouvidoria</a> </li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Portal Correios</a></h3>
+        <ul>
+          <li><a href="http://www.correios.com.br/sitemap">Mapa do site</a></li>
+          <li><a href="sistemas/rastreamento/default.cfm">Rastreamento de objetos</a></li>
+          
+          <li><a href="http://www.mc.gov.br/">Ministério das Comunicações</a></li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Outros sites dos Correios</a></h3>
+        <ul>
+          
+          <li><a href="http://shopping.correios.com.br/correiosonline">Loja virtual dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/correios">Blog dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/filatelia">Espaço da Filatelia</a></li>
+          <li><a href="http://m.correios.com.br/">Correios Mobile</a></li>
+          <li><a href="http://www2.correios.com.br/">Sistemas dos Correios</a></li>
+        </ul>
+      </div>
+      <div class="copy"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/politica-de-privacidade-e-notas-legais/">Política de Privacidade e notas legais</a> -  © Copyright  2014 Correios - Todos os direitos reservados. </div>
+      
+  </div>
+  
+</div>
+ 
+</div>
+<!-- class="back" -->
+
+<script type="text/javascript">
+
+ddaccordion.init({
+	headerclass: "expo", //Shared CSS class name of headers group
+	contentclass: "dados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+	}
+})
+
+ddaccordion.init({
+	headerclass: "abarotulo", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			
+	}
+})
+
+
+/*Agencias*/
+ddaccordion.init({
+	headerclass: "expodados", //Shared CSS class name of headers group
+	contentclass: "contentexpodados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function iconeAbaMouseOut(){
+	$('ul.iconeaba').mouseleave(function() {
+		ddaccordion.collapseall('abarotulo');
+	});	
+}
+function produtosAZMouseOut(){
+	$('div.produtosaz').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+function produtosAZtrocaMostraTudo(){
+	$('#abreTudo').css('display','block');
+	$('#abreFecha a').click(function() {
+		$("#abreFecha a").toggle();
+	});	
+}
+
+function cbDivMouseOut(){
+	$('div.cbDiv').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+$(document).ready(function(){
+	iconeAbaMouseOut();
+	produtosAZMouseOut();
+	produtosAZtrocaMostraTudo();
+	cbDivMouseOut();
+	
+});
+
+
+</script><style type="text/css">
+.dados{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.submenu{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.contentexpodados{display: none}
+a.hiddenajaxlink{display: none}
+</style> <script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#nav a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent", // the class of the content you are hiding until the tab is clicked
+			//showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: 1, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+</script> 		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".inline2").colorbox({inline:true, width:"340px"});
+				$(".inline3").colorbox({inline:true, width:"70%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-564464-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-564464-1');
+</script>
+
+
+
+ 
+
+<!-- contentobjects: page generated at 2017-09-22 11:15 AM -->
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 20px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

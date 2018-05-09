@@ -1,11 +1,14 @@
 package br.com.rsinet.rkoyanagui.correios.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClass extends PageObject{
+	//WebDriver driver = new ChromeDriver();
 
 	@FindBy(xpath = "//*[@id=\"content-servicos\"]/ul/li[2]/form/div[1]/label/strong")
 	private WebElement tituloCaixaBuscaCepEndereco;
@@ -62,6 +65,37 @@ public class PageObjectClass extends PageObject{
 	
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
+
+	public WebElement getItemMenuProdutoOuServico() {
+		return itemMenuProdutoOuServico;
+	}
+
+	public WebElement getBtnBuscarAgencia() {
+		return btnBuscarAgencia;
+	}
+
+	public WebElement getTituloTelaBuscaAgencia() {
+		return tituloTelaBuscaAgencia;
+	}
+
+	public WebElement getBuscarAgenciaPor(String value) {
+		buscarAgenciaPor = this.find(By
+			.xpath("//input[contains(@name, \"tipoBusca\") and contains(@value, \""
+			+ value + "\")]"));
+		return buscarAgenciaPor;
+	}
+
+	public WebElement getEstado() {
+		return estado;
+	}
+
+	public WebElement getMunicipio() {
+		return municipio;
+	}
+
+	public WebElement getResultadoBuscaAgencia() {
+		return resultadoBuscaAgencia;
+	}
 
 	public WebElement getTituloCaixaBuscaCepEndereco() {
 		return tituloCaixaBuscaCepEndereco;

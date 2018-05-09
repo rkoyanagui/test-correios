@@ -112,14 +112,15 @@ public class StepBusiness {
 	}
 	
 	public void selecionarBuscarAgenciaPor(String por) {
-		viewElement.selectByValue(page.getBuscarAgenciaPor(), por);
+		//viewElement.clickAndWait(page.getBuscarAgenciaPor(por), 5);
+		viewElement.clickAndWait(page.getBuscarAgenciaPor(por), 5);
 	}
 	
 	public void preencherEstado(String estado) {
 		viewElement.selectByVisibleText(page.getEstado(), estado);
 	}
 	
-	public void preencherMunicipio(String municipio) {
+	public void preencherMunicipio(String municipio) throws InterruptedException {
 		viewElement.wait(10);
 		viewElement.selectByVisibleText(page.getMunicipio(), municipio);
 	}
@@ -127,8 +128,6 @@ public class StepBusiness {
 	public void validarTelaResultadoBuscaAgencia(String arg1) {
 		viewElement.waitForElementIsPresent(20, page.getResultadoBuscaAgencia());
 		LOG.info(">> " + page.getResultadoBuscaAgencia().getText());
-		Assert.(arg1, page.getResultadoBuscaAgencia().getText());
-		String s = new String();
-		s.
+		Assert.assertEquals(arg1, page.getResultadoBuscaAgencia().getText());
 	}
 }
