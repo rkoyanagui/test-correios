@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -139,12 +140,18 @@ public class StepBusiness {
 	}
 	
 	public void clicarBotao(String botao) {
-		viewElement.clickAndWait(5, page.getBotao(botao));
+		viewElement.click(page.getBotao(botao));
 	}
 	
-	public void validarTitulo(String titulo) {
+	public void validarTitulo(String titulo) throws InterruptedException {
+		Thread.sleep(5000);
+		page.switchToFrame(1);
 		viewElement.waitForElementIsPresent(10, page.getHeader(titulo));
 		LOG.info(">> " + page.getHeader(titulo).getText());
 		Assert.assertEquals(titulo, page.getHeader(titulo).getText());
+	}
+	
+	public void preencherCampoComValor(String campo, String valor) {
+		
 	}
 }

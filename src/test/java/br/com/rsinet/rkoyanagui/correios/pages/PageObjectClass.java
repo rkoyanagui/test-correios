@@ -66,8 +66,32 @@ public class PageObjectClass extends PageObject{
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
 	
+	public void findFieldByName() {
+		
+	}
+	
+	/**
+	 * Transfere o contexto para uma iframe.
+	 * 
+	 * @param counter é um inteiro maior que zero
+	 * que deve indicar para qual das iframes pesquisadas
+	 * o contexto é transferido: se é para a primeira encontrada (1), ou
+	 * para a segunda (2), etc.
+	*/
+	public void switchToFrame(int counter) {
+		WebElement selectedFrame = this.find(By.xpath(
+				"//iframe[" + counter + "]" ));
+		this.getDriver().switchTo().frame(selectedFrame);
+	}
+	
 	public WebElement getHeader(String query) {
-		return this.find(By.xpath(".//*[self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6][.[contains(text(),\"Busca CEP - Endereço\")][1]]"));
+		return this.find(By.xpath(
+				"//*[self::h1 or "
+				+ "self::h2 or "
+				+ "self::h3 or "
+				+ "self::h4 or "
+				+ "self::h5 or "
+				+ "self::h6][contains(text(), \"" + query + "\")][1]"));
 	}
 	
 	public WebElement getBotao(String query) {

@@ -121,8 +121,13 @@ public class StepDefinition {
 	    stepB.clicarBotao(botao);
 	}
 	
-	@Then("^sistema apresenta a tela \"([^\"]*)\"$")
-	public void sistema_apresenta_a_tela(String tituloTela1) throws Throwable {
-	    stepB.validarTitulo(tituloTela1);
+	@When("^sistema apresenta a tela \"([^\"]*)\"$")
+	public void sistema_apresenta_a_tela(String tituloTela) throws Throwable {
+	    stepB.validarTitulo(tituloTela);
+	}
+	
+	@Then("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
+	public void preencho_o_campo_X1_com_o_valor_X2(String nomeCampo, String valorCampo) throws Throwable {
+	    stepB.preencherCampoComValor(nomeCampo, valorCampo);
 	}
 }

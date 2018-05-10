@@ -8,7 +8,8 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
   And clico em um item do menu 'Produto ou Servico' "<produto_ou_servico>"
   And sistema apresenta tela de calculo de precos e prazos
   And clico no botao "<botao1>"
-  Then sistema apresenta a tela "<tituloTela1>"
+  And sistema apresenta a tela "<tituloTela1>"
+  Then preencho o campo "<nomeCampo1>" com o valor "<valorCampo1>"
 #  And preencho 'CEP de origem' "<cep_origem>"
 #  And preencho 'CEP de destino' "<cep_destino>"
 #  And seleciono 'Tipo do servico' "<tipo_servico>"
@@ -16,6 +17,6 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
 #  Then sistema apresenta tela de resultado do calculo de precos e prazos "<validacao>"
   
 Examples:
-   | url                                  | produto_ou_servico                           | botao1        | tituloTela1          |
-   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço |
+   | url                                  | produto_ou_servico                           | botao1        | tituloTela1          | nomeCampo1 | valorCampo1              |
+   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | relaxation | Avenida dos Autonomistas |
    
