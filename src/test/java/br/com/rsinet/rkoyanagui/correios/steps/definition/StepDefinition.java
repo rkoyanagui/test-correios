@@ -116,18 +116,30 @@ public class StepDefinition {
 	    stepB.validarTelaResultadoBuscaAgencia(resultado);
 	}
 	
-	@When("^clico no botao \"([^\"]*)\"$")
-	public void clico_no_botao(String botao) throws Throwable {
+	@When("^clico o botao \"([^\"]*)\"$")
+	public void clico_o_botao(String botao) throws Throwable {
 	    stepB.clicarBotao(botao);
 	}
 	
-	@When("^sistema apresenta a tela \"([^\"]*)\"$")
-	public void sistema_apresenta_a_tela(String tituloTela) throws Throwable {
+	@When("^sistema apresenta o frame \"([^\"]*)\"$")
+	public void sistema_apresenta_o_frame(String tituloTela) throws Throwable {
+		stepB.mudarContextoParaFrame("colorbox");
 	    stepB.validarTitulo(tituloTela);
 	}
 	
-	@Then("^preencho o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
-	public void preencho_o_campo_X1_com_o_valor_X2(String nomeCampo, String valorCampo) throws Throwable {
-	    stepB.preencherCampoComValor(nomeCampo, valorCampo);
+	@When("^preencho no formulario \"([^\"]*)\" o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
+	public void preencho_o_campo_X1_com_o_valor_X2(
+			String nomeFormulario, String nomeCampo, String valor) throws Throwable {
+	    stepB.preencherValor(nomeFormulario, nomeCampo, valor);
+	}
+	
+	@When("^clico o botao 'Buscar'$")
+	public void clico_o_botao_buscar() throws Throwable {
+	    stepB.clicarInput("Geral");
+	}
+	
+	@When("^sistema apresenta o resultado da busca \"([^\"]*)\"$")
+	public void sistema_apresenta_o_resultado_da_busca(String texto) throws Throwable {
+	    stepB.validarTexto(texto);
 	}
 }

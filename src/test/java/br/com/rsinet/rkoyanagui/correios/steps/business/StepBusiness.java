@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -114,7 +115,6 @@ public class StepBusiness {
 	}
 	
 	public void selecionarBuscarAgenciaPor(String por) {
-		//viewElement.clickAndWait(page.getBuscarAgenciaPor(por), 5);
 		viewElement.clickAndWait(page.getBuscarAgenciaPor(por), 5);
 	}
 	
@@ -143,15 +143,27 @@ public class StepBusiness {
 		viewElement.click(page.getBotao(botao));
 	}
 	
-	public void validarTitulo(String titulo) throws InterruptedException {
-		Thread.sleep(5000);
-		page.switchToFrame(1);
+	public void mudarContextoParaFrame(String ancestorId) {
+		viewElement.waitForElementIsPresent(10, page.getFrame(ancestorId));
+		page.switchToFrame(page.getFrame(ancestorId));
+	}
+	
+	public void validarTitulo(String titulo) {
 		viewElement.waitForElementIsPresent(10, page.getHeader(titulo));
 		LOG.info(">> " + page.getHeader(titulo).getText());
 		Assert.assertEquals(titulo, page.getHeader(titulo).getText());
 	}
 	
-	public void preencherCampoComValor(String campo, String valor) {
-		
+	public void preencherValor(String nomeFormulario, String nomeCampo, String valor) {
+		viewElement.sendText(page.getInput(nomeFormulario, nomeCampo), valor);
+	}
+	
+	public void clicarInput(String id_de_busca) {
+		viewElement.click(page.getInputSubmit(id_de_busca));
+	}
+	
+	public void validarTexto(String texto) {
+		viewElement.waitForElementIsPresent(10, page.getText(texto));
+		Assert.assertEquals(texto, page.getText(texto).getText());
 	}
 }

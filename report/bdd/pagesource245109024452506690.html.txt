@@ -1,0 +1,1165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class="js x-border-box x-strict"><head><meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">/* &lt;![CDATA[ */_cf_loadingtexthtml="&lt;img alt=' ' src='/cfscripts/ajax/resources/cf/images/loading.gif'/&gt;";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cfscripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=8578;
+_cf_flash_policy_port=1244;
+_cf_clientid='670F8D7C0394DB9526F087F5FE07A1C5';/* ]]&gt; */</script><script type="text/javascript" src="/cfscripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/yui/animation/animation-min.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/ext/ext-all.js"></script>
+<script type="text/javascript" src="/cfscripts/ajax/package/cfwindow.js"></script>
+<script type="text/javascript" src="/cfscripts/cfform.js"></script>
+<script type="text/javascript" src="/cfscripts/masks.js"></script>
+<script type="text/javascript" src="/cfscripts/cfformhistory.js"></script>
+<link rel="stylesheet" type="text/css" href="/cfscripts/ajax/resources/ext/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/cfscripts/ajax/resources/cf/cf.css" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+<meta http-equiv="Content-Language" content="pt" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>home</title>
+<meta name="description" content="[page]" />
+<meta name="keywords" content="" />
+<script type="text/javascript"> 
+pageid = '39CD6889-CA4F-EF45-8CCC7FFAB24E263A'; 
+</script>
+<noscript>
+&lt;p&gt;identificador da pÃ¡gina&lt;/p&gt;
+</noscript>
+<base href="http://www2.correios.com.br/" /> 
+<link rel="icon" href="home2014/img/icon.png" type="image/gif" />
+
+<!-- scripts --><noscript>&lt;p&gt;Biblioteca de efeitos&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-1.6.2.min.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para menus&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/ddaccordion.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para tabbes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jtabber.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos colorbox&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery.colorbox-min.js"></script>
+   <noscript>&lt;p&gt;Biblioteca de validação de formulários&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/validations.js"></script>
+
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>
+  <script type="text/javascript" src="home2014/js/scripts.js"></script>
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>   
+  <script type="text/javascript" src="home2014/js/cookie.js"></script>
+    <noscript>&lt;p&gt;&lt;/p&gt;Script Javascript</noscript>   
+<script type="text/javascript">document.documentElement.className += " js";</script>
+  <noscript>&lt;p&gt;Controle de abas&lt;/p&gt;</noscript>
+ <noscript>&lt;p&gt;Biblioteca de animações&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-ui-1.8.16.custom.min.js">
+  </script>  
+   <script type="text/javascript">
+   jQuery(function($){
+        $.datepicker.regional['pt-BR'] = {
+                closeText: 'Fechar',
+                prevText: '&amp;#x3c;Anterior',
+                nextText: 'Pr&amp;oacute;ximo&amp;#x3e;',
+                currentText: 'Hoje',
+                monthNames: ['Janeiro','Fevereiro','Mar&amp;ccedil;o','Abril','Maio','Junho',
+                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+                'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda-feira','Ter&amp;ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+});
+</script>
+  
+    
+
+<!-- /scripts -->
+
+<!-- CSS -->
+
+  <link href="home2014/css/layout.css" rel="stylesheet" type="text/css" />
+<!-- /CSS --->
+ 
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFWINDOW');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFFORM');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	Ext.onReady(function(){var _cf_window_init_1771879452771951=function()
+	{
+		_cf_bind_init_1771879452771952=function()
+		{
+			ColdFusion.Bind.register([['paicod_ch','form1','change'],['cid_no','form1','change']],{'bindTo':'WindowCidade-body','bindExpr':['http://www2.correios.com.br/sistemas/efi/consulta/precos/SelecaoCidade.cfm?paicod_ch=',['paicod_ch','form1','value'],'&amp;cid_no=',['cid_no','form1','value']]},ColdFusion.Bind.urlBindHandler,false);
+		};ColdFusion.Event.registerOnLoad(_cf_bind_init_1771879452771952);var _cf_window=ColdFusion.Window.create('WindowCidade','Cidade','http://www2.correios.com.br/sistemas/efi/consulta/precos/SelecaoCidade.cfm?paicod_ch={form1:paicod_ch}&amp;cid_no={form1:cid_no}',{ modal:false, closable:true, divid:'cf_window1771879452771950', draggable:true, resizable:true, fixedcenter:true, width:850, height:350, shadow:true, bodystyle:'overflow:auto; font-size:1.15em;', callfromtag:true, minwidth:50, minheight:200, initshow:false, destroyonclose:false, _cf_refreshOnShow:true});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1771879452771951);});
+/* ]]&gt; */</script>
+</head>
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  <body id="ext-gen1018" class="x-body x-webkit x-chrome x-reset"><span></span>             <!--<![endif]-->
+<div class="back">
+
+<div class="acessibilidade">
+  <div class="wrap">
+    <ul>
+      
+        <li class="tocontent"> <span class="separator-bar"> </span> <a href="javascript:void(0);" onclick="document.location.hash='ancora';" title="Ir para o conteúdo principal da página">Ir ao  conteúdo</a> </li>
+        <li class="font-plus" id="biggerFont"> <a href="javascript:void(0);" title="Aumentar o tamanho da fonte do texto">A</a> </li>
+        <li id="defaultFont"> <span class="separator-dot"> </span> <a href="javascript:void(0);" title="Retornar a fonte do texto para tamanho padrão">Tamanho padrão</a> <span class="separator-dot"> </span> </li>
+        <li class="font-minus" id="smallerFont"> <a href="javascript:void(0);" title="Diminuir o tamanho da fonte do texto">A</a> </li>
+        <li class="contrast" id="contrast"> <span class="separator-bar"> </span> <a href="javascript:void(0);" title="Modificar para o modo de alto contraste">Contraste</a> <span class="separator-bar"> </span> </li>
+        <li> <span class="separator-bar"> </span> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/">Teclado Virtual</a> </li>
+        <li> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/" id="txt-headmouse">Headmouse</a></li>
+        
+    </ul>
+  </div>
+</div>
+ 
+<!-- header --->
+
+
+<div class="header">
+<h1 class="logo float-left"> <a href="http://www.correios.com.br" title="Ir para a página incial" alt="Logo Correios"><img src="home2014/img/layout/logo.png" alt="Ir para a página inicial" title="Ir para a página incial" /></a> </h1>
+<div class="acesso_rapido">
+
+  <div class="text-right">
+    
+    <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/fc">Fale com os Correios</a><br />
+  </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="0h">Outros sites</div>
+    <span class="dados abaaz" contentindex="0c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Acesse a outros sites dos Correios</span><br />
+      
+      <a href="produtosaz/default.cfm?filtro=R/Z"><b>Espaço da Filatelia</b></a><br />
+      <a href="http://blog.correios.com.br/correios"><b>Blog Institucional do Correios</b></a><br />
+      <a href="http://m.correios.com.br"><b>Correios mobile</b></a><br />
+    </div>
+    </span> </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="1h">Correios de A a Z</div>
+    <span class="dados abaaz" contentindex="1c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos.<br />
+      </span><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1"><b>Todos os itens</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z?filtro=abc"><b>Correios de A-C</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=def"><b>Correios de D-F</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=ghijklmnopq"><b>Correios de G-Q</b></a><br />
+      <a href="http://www.correios.com.br/correios-a-a-z-1?filtro=rstuvwxyz"><b>Correios de R-Z</b></a> </div>
+    </span> </div>
+  </div>
+  <!-- acesso rápido -->
+  <br class="clr" />
+  </div>
+  <div class="tabs">
+  
+  <div class="wrap">
+    <ul class="tabs-list">
+      
+      <li class="current"> <a href="default.cfm">
+        <h2>Sistemas</h2>
+        </a> </li>
+    </ul>
+  </div>
+   
+<!-- /header --->
+<div class="wrap">   
+<div class="content">
+<div class="laminas" style="display: block;">
+<div class="column1">
+<span class="mver"> 
+<span class="dominio"></span>
+
+		<h3><span style="color:white">47 </span>Menu</h3>
+	
+
+<ul>
+	
+		<li><a href="sistemas/efi/prepostagem.cfm">Pré-postagem Internacional</a></li>	
+	
+	
+	<li><a href="sistemas/efi/consulta/ncm/default.cfm">Consulta NCM</a></li>
+	<li><a href="sistemas/efi/consulta/faq/faq.cfm">FAQ</a></li>
+	<li><a href="sistemas/efi/consulta/cotacaomoeda/default.cfm">Cotação de moedas</a></li>
+	<li><a href="sistemas/efi/consulta/ondepostar/default.cfm">Onde postar</a></li>
+	<li><a href="sistemas/efi/consulta/precos/default.cfm">Preços e prazos Internacionais</a></li>
+	<li><a href="sistemas/efi/consulta/proibicao/default.cfm">Proibição e restrição de postagem</a></li>
+	
+	
+</ul>
+<br />
+
+<span style="color:white">{ts '2018-05-10 15:22:45'}</span>
+<!-- testeWEB2847 - (SAC2847). -->
+ 
+</span>
+<!-- Fim Menu vertical -->
+</div>
+<!-- column1 -->
+<div class="column2">
+<div class="breadcrumb"></div>
+<div class="content  trescolunas">
+<a name="ancora"></a>
+
+<div class="tituloimagem">
+<h3>Preços e prazos internacionais</h3>
+</div>
+
+<div class="quadroavisos">
+<font color="red"><b>Aviso</b></font><br />
+<br />
+Prazo de entrega contado a partir do dia útil seguinte ao da postagem. Para postagem 
+aos sábados, domingos e feriados, e para postagem após o horário de limite de 
+encaminhamento no mesmo dia considerar o dia útil seguinte como o dia da postagem.<br />
+¹ Prazo de entrega garantido somente para SEDEX Mundi. Para as demais modalidades os prazos informados são estimados.<br />
+<br />
+As remessas internacionais estão sujeitas à retenção pela aduana (do Brasil e/ou 
+do país de destino) para verificação de conteúdo e/ou aplicação de tributos/taxas, 
+de acordo com a legislação local. Eventuais atrasos decorrentes desse tipo específico 
+de procedimento não foram considerados nos prazos aqui apresentados.<br />
+No caso de emissão da DSE-Declaração Simplificada de Exportação pela ECT o prazo deve ser acrescido de mais 1 dia útil.<br />
+<br />
+O preço desta pesquisa é meramente informativo, devendo ser confirmado no ato da postagem, quando também deverá ser confirmada a disponibilidade do serviço.
+
+</div>
+
+<div class="ctrlcontent">
+
+<script language="javascript" src="http://www2.correios.com.br/sistemas/efi/geral/js/ajax.js"></script>
+<script language="javascript" src="http://www2.correios.com.br/sistemas/efi/geral/js/JavaScript.js"></script>
+<script language="javascript" src="http://www2.correios.com.br/sistemas/efi/consulta/precos/js/Embalagem.js"></script>
+<script language="javascript" src="http://www2.correios.com.br/sistemas/efi/consulta/precos/js/Default.js"></script>
+
+<div class="form hundredp">
+<div class="contentform">
+
+<form name="form1" id="form1" action="/sistemas/efi/consulta/precos/default.cfm" method="POST">
+<div>
+<span>
+<strong>Tipo de Encomenda</strong>
+<br />
+<select name="tre_nu_sequencial" id="tre_nu_sequencial">
+<option value="">&lt;&lt; Selecione &gt;&gt;</option>
+
+<option value="4_Documento">Documento</option>
+
+<option value="1_Não-documento">Não-documento</option>
+
+</select>
+</span>
+<div class="separator"></div>
+<div id="divDadosCEP" style="display:None"></div>
+<span class="f2col">
+<label>CEP de origem:*</label>
+<br />
+                                                                                                      
+<input type="text" id="rem_ed_cep" name="rem_ed_cep" value="" class="f2col" maxlength="9" onblur="formataCEP(this);buscarCEP('http://www2.correios.com.br/sistemas/efi/realizarprepostagem/dsp/'); " onkeypress="return numericos(this,event);" onkeyup="formataCEP(this);" />
+
+<a href=" http://www.buscacep.correios.com.br/" target="_blank">Não sabe o CEP?</a><br />
+</span> 
+</div>    
+<div class="separator"></div>
+<div>    
+<span>
+
+<b>Peso (gramas):</b>
+<br />
+<input type="text" name="obj_nu_peso" id="obj_nu_peso" value="" size="20" maxlength="6" />
+
+</span>
+<span>
+<b>País de destino:</b>
+<br />
+<select name="paicod_ch" id="paicod_ch" onchange="limpacampocidade();">
+<option value="">&lt;&lt; Selecione &gt;&gt;</option>
+
+<option value="       XA _ACORES E MADEIRA_N">ACORES E MADEIRA              </option>
+
+<option value="       AF _AFEGANISTAO_N">AFEGANISTAO                   </option>
+
+<option value="       ZA _AFRICA DO SUL_S">AFRICA DO SUL                 </option>
+
+<option value="       AL _ALBANIA_N">ALBANIA                       </option>
+
+<option value="       DE _ALEMANHA_S">ALEMANHA                      </option>
+
+<option value="       AD _ANDORRA_N">ANDORRA                       </option>
+
+<option value="       AO _ANGOLA_S">ANGOLA                        </option>
+
+<option value="       AI _ANGUILA_N">ANGUILA                       </option>
+
+<option value="       AG _ANTIGUA E BARBUDA_N">ANTIGUA E BARBUDA             </option>
+
+<option value="       AN _ANTILHAS HOLANDESAS_N">ANTILHAS HOLANDESAS           </option>
+
+<option value="       SA _ARABIA SAUDITA_N">ARABIA SAUDITA                </option>
+
+<option value="       DZ _ARGELIA_N">ARGELIA                       </option>
+
+<option value="       AR _ARGENTINA_S">ARGENTINA                     </option>
+
+<option value="       AM _ARMENIA_S">ARMENIA                       </option>
+
+<option value="       AW _ARUBA_N">ARUBA                         </option>
+
+<option value="       XB _ASCENSAO_N">ASCENSAO                      </option>
+
+<option value="       AU _AUSTRALIA_N">AUSTRALIA                     </option>
+
+<option value="       AT _AUSTRIA_S">AUSTRIA                       </option>
+
+<option value="       AZ _AZERBAIJAO_N">AZERBAIJAO                    </option>
+
+<option value="       BS _BAHAMAS_N">BAHAMAS                       </option>
+
+<option value="       BH _BAHREIN_N">BAHREIN                       </option>
+
+<option value="       BD _BANGLADESH_N">BANGLADESH                    </option>
+
+<option value="       BB _BARBADOS_N">BARBADOS                      </option>
+
+<option value="       BY _BELARUS_N">BELARUS                       </option>
+
+<option value="       BE _BELGICA_N">BELGICA                       </option>
+
+<option value="       BZ _BELIZE_N">BELIZE                        </option>
+
+<option value="       BJ _BENIN_N">BENIN                         </option>
+
+<option value="       BM _BERMUDAS_N">BERMUDAS                      </option>
+
+<option value="       BO _BOLIVIA_N">BOLIVIA                       </option>
+
+<option value="       BA _BOSNIA HERZEGOVINIA_N">BOSNIA HERZEGOVINIA           </option>
+
+<option value="       BW _BOTSUANA_N">BOTSUANA                      </option>
+
+<option value="       BR _BRASIL_N">BRASIL                        </option>
+
+<option value="       BN _BRUNEI DARUSSALAM_N">BRUNEI DARUSSALAM             </option>
+
+<option value="       BG _BULGARIA_N">BULGARIA                      </option>
+
+<option value="       BF _BURKINA FASO_N">BURKINA FASO                  </option>
+
+<option value="       BI _BURUNDI_N">BURUNDI                       </option>
+
+<option value="       BT _BUTAO_N">BUTAO                         </option>
+
+<option value="       CV _CABO VERDE_N">CABO VERDE                    </option>
+
+<option value="       CM _CAMAROES_N">CAMAROES                      </option>
+
+<option value="       KH _CAMBOJA_N">CAMBOJA                       </option>
+
+<option value="       CA _CANADA_N">CANADA                        </option>
+
+<option value="       XC _CANARIAS E TENERIFE_N">CANARIAS E TENERIFE           </option>
+
+<option value="       QA _CATAR_N">CATAR                         </option>
+
+<option value="       KY _CAYMAN_N">CAYMAN                        </option>
+
+<option value="       KZ _CAZAQUISTAO_S">CAZAQUISTAO                   </option>
+
+<option value="       CF _CENTRO AFRICANA (REPUBLICA)_N">CENTRO AFRICANA (REPUBLICA)   </option>
+
+<option value="       TD _CHADE_N">CHADE                         </option>
+
+<option value="       CL _CHILE_N">CHILE                         </option>
+
+<option value="       CN _CHINA_N">CHINA                         </option>
+
+<option value="       CY _CHIPRE_N">CHIPRE                        </option>
+
+<option value="       CX _CHRISTMAS_N">CHRISTMAS                     </option>
+
+<option value="       SG _CINGAPURA_N">CINGAPURA                     </option>
+
+<option value="       CC _COCOS_N">COCOS                         </option>
+
+<option value="       CO _COLOMBIA_S">COLOMBIA                      </option>
+
+<option value="       KM _COMORES_N">COMORES                       </option>
+
+<option value="       CD _CONGO(REP DEMOCRATICA)_N">CONGO(REP DEMOCRATICA)        </option>
+
+<option value="       CG _CONGO(REP POPULAR)_N">CONGO(REP POPULAR)            </option>
+
+<option value="       CK _COOK (ILHAS)_N">COOK (ILHAS)                  </option>
+
+<option value="       KP _COREIA DO NORTE_N">COREIA DO NORTE               </option>
+
+<option value="       KR _COREIA DO SUL_S">COREIA DO SUL                 </option>
+
+<option value="       KV _COSSOVO_N">COSSOVO                       </option>
+
+<option value="       CI _COSTA DO MARFIM_S">COSTA DO MARFIM               </option>
+
+<option value="       CR _COSTA RICA_N">COSTA RICA                    </option>
+
+<option value="       HR _CROACIA_N">CROACIA                       </option>
+
+<option value="       CU _CUBA_S">CUBA                          </option>
+
+<option value="       DK _DINAMARCA_S">DINAMARCA                     </option>
+
+<option value="       DJ _DJIBUTI_N">DJIBUTI                       </option>
+
+<option value="       DM _DOMINICA_N">DOMINICA                      </option>
+
+<option value="       DO _DOMINICANA (REPUBLICA)_S">DOMINICANA (REPUBLICA)        </option>
+
+<option value="       EG _EGITO_N">EGITO                         </option>
+
+<option value="       SV _EL SALVADOR_S">EL SALVADOR                   </option>
+
+<option value="       AE _EMIRADOS ARABES UNIDOS_S">EMIRADOS ARABES UNIDOS        </option>
+
+<option value="       EC _EQUADOR_S">EQUADOR                       </option>
+
+<option value="       ER _ERITREIA_N">ERITREIA                      </option>
+
+<option value="       SK _ESLOVAQUIA_N">ESLOVAQUIA                    </option>
+
+<option value="       SI _ESLOVENIA_N">ESLOVENIA                     </option>
+
+<option value="       ES _ESPANHA_N">ESPANHA                       </option>
+
+<option value="       US _ESTADOS UNIDOS_S">ESTADOS UNIDOS                </option>
+
+<option value="       EE _ESTONIA_N">ESTONIA                       </option>
+
+<option value="       ET _ETIOPIA_S">ETIOPIA                       </option>
+
+<option value="       FK _FALKLAND_N">FALKLAND                      </option>
+
+<option value="       FO _FAROE_S">FAROE                         </option>
+
+<option value="       FJ _FIJI_N">FIJI                          </option>
+
+<option value="       PH _FILIPINAS_S">FILIPINAS                     </option>
+
+<option value="       FI _FINLANDIA_N">FINLANDIA                     </option>
+
+<option value="       FR _FRANCA_S">FRANCA                        </option>
+
+<option value="       GA _GABAO_N">GABAO                         </option>
+
+<option value="       GM _GAMBIA_N">GAMBIA                        </option>
+
+<option value="       GH _GANA_N">GANA                          </option>
+
+<option value="       GE _GEORGIA_S">GEORGIA                       </option>
+
+<option value="       GS _GEORGIA DO SUL E SANDWICH_N">GEORGIA DO SUL E SANDWICH     </option>
+
+<option value="       GI _GIBRALTAR_N">GIBRALTAR                     </option>
+
+<option value="       GB _GRA BRETANHA_S">GRA BRETANHA                  </option>
+
+<option value="       GD _GRANADA_N">GRANADA                       </option>
+
+<option value="       GR _GRECIA_N">GRECIA                        </option>
+
+<option value="       GL _GROELANDIA_N">GROELANDIA                    </option>
+
+<option value="       GP _GUADALUPE_N">GUADALUPE                     </option>
+
+<option value="       GU _GUAM_N">GUAM                          </option>
+
+<option value="       GT _GUATEMALA_N">GUATEMALA                     </option>
+
+<option value="       GG _GUERNESEY_N">GUERNESEY                     </option>
+
+<option value="       GY _GUIANA_N">GUIANA                        </option>
+
+<option value="       GF _GUIANA FRANCESA_N">GUIANA FRANCESA               </option>
+
+<option value="       GN _GUINE_S">GUINE                         </option>
+
+<option value="       GW _GUINE BISSAU_N">GUINE BISSAU                  </option>
+
+<option value="       GQ _GUINE EQUATORIAL_N">GUINE EQUATORIAL              </option>
+
+<option value="       HT _HAITI_N">HAITI                         </option>
+
+<option value="       HN _HONDURAS_S">HONDURAS                      </option>
+
+<option value="       HK _HONG KONG_N">HONG KONG                     </option>
+
+<option value="       HU _HUNGRIA_S">HUNGRIA                       </option>
+
+<option value="       YE _IEMEM_S">IEMEM                         </option>
+
+<option value="       XD _ILHAS MENORES DA FRANCA_N">ILHAS MENORES DA FRANCA       </option>
+
+<option value="       IN _INDIA_S">INDIA                         </option>
+
+<option value="       ID _INDONESIA_S">INDONESIA                     </option>
+
+<option value="       IR _IRA_N">IRA                           </option>
+
+<option value="       IQ _IRAQUE_N">IRAQUE                        </option>
+
+<option value="       IE _IRLANDA_N">IRLANDA                       </option>
+
+<option value="       IS _ISLANDIA_N">ISLANDIA                      </option>
+
+<option value="       IL _ISRAEL_S">ISRAEL                        </option>
+
+<option value="       IT _ITALIA_S">ITALIA                        </option>
+
+<option value="       JM _JAMAICA_S">JAMAICA                       </option>
+
+<option value="       JP _JAPAO_S">JAPAO                         </option>
+
+<option value="       JE _JERSEY_N">JERSEY                        </option>
+
+<option value="       JO _JORDANIA_N">JORDANIA                      </option>
+
+<option value="       KI _KIRIBATI_N">KIRIBATI                      </option>
+
+<option value="       KW _KUWAIT_N">KUWAIT                        </option>
+
+<option value="       LA _LAOS_N">LAOS                          </option>
+
+<option value="       LS _LESOTO_S">LESOTO                        </option>
+
+<option value="       LV _LETONIA_N">LETONIA                       </option>
+
+<option value="       LB _LIBANO_N">LIBANO                        </option>
+
+<option value="       LR _LIBERIA_N">LIBERIA                       </option>
+
+<option value="       LY _LIBIA_N">LIBIA                         </option>
+
+<option value="       LI _LIECHTENSTEIN_N">LIECHTENSTEIN                 </option>
+
+<option value="       LT _LITUANIA_N">LITUANIA                      </option>
+
+<option value="       LU _LUXEMBURGO_N">LUXEMBURGO                    </option>
+
+<option value="       MO _MACAU_S">MACAU                         </option>
+
+<option value="       MK _MACEDONIA_N">MACEDONIA                     </option>
+
+<option value="       MG _MADAGASCAR_N">MADAGASCAR                    </option>
+
+<option value="       MY _MALASIA_N">MALASIA                       </option>
+
+<option value="       MW _MALAVI_N">MALAVI                        </option>
+
+<option value="       MV _MALDIVAS_N">MALDIVAS                      </option>
+
+<option value="       ML _MALI_N">MALI                          </option>
+
+<option value="       MT _MALTA_N">MALTA                         </option>
+
+<option value="       IM _MAN_N">MAN                           </option>
+
+<option value="       MP _MARIANAS_N">MARIANAS                      </option>
+
+<option value="       MA _MARROCOS_N">MARROCOS                      </option>
+
+<option value="       MH _MARSHALL_N">MARSHALL                      </option>
+
+<option value="       MQ _MARTINICA_N">MARTINICA                     </option>
+
+<option value="       MU _MAURICIO_N">MAURICIO                      </option>
+
+<option value="       MR _MAURITANIA_N">MAURITANIA                    </option>
+
+<option value="       YT _MAYOTTE_N">MAYOTTE                       </option>
+
+<option value="       MX _MEXICO_N">MEXICO                        </option>
+
+<option value="       MM _MIANMAR_N">MIANMAR                       </option>
+
+<option value="       FM _MICRONESIA_N">MICRONESIA                    </option>
+
+<option value="       XG _MIDWAY_N">MIDWAY                        </option>
+
+<option value="       MZ _MOCAMBIQUE_N">MOCAMBIQUE                    </option>
+
+<option value="       MD _MOLDAVIA_S">MOLDAVIA                      </option>
+
+<option value="       MC _MONACO_N">MONACO                        </option>
+
+<option value="       MN _MONGOLIA_N">MONGOLIA                      </option>
+
+<option value="       MS _MONSERRAT_N">MONSERRAT                     </option>
+
+<option value="       ME _MONTENEGRO_N">MONTENEGRO                    </option>
+
+<option value="       NA _NAMIBIA_N">NAMIBIA                       </option>
+
+<option value="       NR _NAURU_N">NAURU                         </option>
+
+<option value="       NP _NEPAL_N">NEPAL                         </option>
+
+<option value="       NI _NICARAGUA_N">NICARAGUA                     </option>
+
+<option value="       NE _NIGER_N">NIGER                         </option>
+
+<option value="       NG _NIGERIA_N">NIGERIA                       </option>
+
+<option value="       NU _NIUE_N">NIUE                          </option>
+
+<option value="       NF _NORFOLK_N">NORFOLK                       </option>
+
+<option value="       NO _NORUEGA_N">NORUEGA                       </option>
+
+<option value="       NC _NOVA CALEDONIA_N">NOVA CALEDONIA                </option>
+
+<option value="       NZ _NOVA ZELANDIA_N">NOVA ZELANDIA                 </option>
+
+<option value="       OM _OMA_N">OMA                           </option>
+
+<option value="       NL _PAISES BAIXOS_N">PAISES BAIXOS                 </option>
+
+<option value="       PW _PALAU_N">PALAU                         </option>
+
+<option value="       PS _PALESTINA_S">PALESTINA                     </option>
+
+<option value="       PA _PANAMA_N">PANAMA                        </option>
+
+<option value="       PG _PAPUA NOVA GUINE_S">PAPUA NOVA GUINE              </option>
+
+<option value="       PK _PAQUISTAO_N">PAQUISTAO                     </option>
+
+<option value="       PY _PARAGUAI_N">PARAGUAI                      </option>
+
+<option value="       PE _PERU_N">PERU                          </option>
+
+<option value="       PN _PITCAIRN_N">PITCAIRN                      </option>
+
+<option value="       PF _POLINESIA FRANCESA_N">POLINESIA FRANCESA            </option>
+
+<option value="       PL _POLONIA_S">POLONIA                       </option>
+
+<option value="       PR _PORTO RICO_N">PORTO RICO                    </option>
+
+<option value="       PT _PORTUGAL_S">PORTUGAL                      </option>
+
+<option value="       KE _QUENIA_N">QUENIA                        </option>
+
+<option value="       KG _QUIRGUISTAO_N">QUIRGUISTAO                   </option>
+
+<option value="       RE _REUNIAO_N">REUNIAO                       </option>
+
+<option value="       RO _ROMENIA_N">ROMENIA                       </option>
+
+<option value="       RW _RUANDA_N">RUANDA                        </option>
+
+<option value="       RU _RUSSIA_S">RUSSIA                        </option>
+
+<option value="       EH _SAARA OCIDENTAL_N">SAARA OCIDENTAL               </option>
+
+<option value="       PM _SAINT PIERRE ET MIGUELON_N">SAINT PIERRE ET MIGUELON      </option>
+
+<option value="       SB _SALOMAO (ILHAS)_N">SALOMAO (ILHAS)               </option>
+
+<option value="       WS _SAMOA_S">SAMOA                         </option>
+
+<option value="       AS _SAMOA AMERICANA_N">SAMOA AMERICANA               </option>
+
+<option value="       SM _SAN MARINO_N">SAN MARINO                    </option>
+
+<option value="       SH _SANTA HELENA_N">SANTA HELENA                  </option>
+
+<option value="       LC _SANTA LUCIA_S">SANTA LUCIA                   </option>
+
+<option value="       KN _SAO CRITOVAO E NEVIS_N">SAO CRITOVAO E NEVIS          </option>
+
+<option value="       ST _SAO TOME E PRINCIPE_N">SAO TOME E PRINCIPE           </option>
+
+<option value="       VC _SAO VICENTE E GRANADINAS_N">SAO VICENTE E GRANADINAS      </option>
+
+<option value="       SN _SENEGAL_N">SENEGAL                       </option>
+
+<option value="       SL _SERRA LEOA_N">SERRA LEOA                    </option>
+
+<option value="       RS _SERVIA_N">SERVIA                        </option>
+
+<option value="       SC _SEYCHELES_N">SEYCHELES                     </option>
+
+<option value="       SY _SIRIA_S">SIRIA                         </option>
+
+<option value="       SO _SOMALIA_N">SOMALIA                       </option>
+
+<option value="       LK _SRI LANKA_N">SRI LANKA                     </option>
+
+<option value="       SZ _SUAZILANDIA_N">SUAZILANDIA                   </option>
+
+<option value="       SD _SUDAO_N">SUDAO                         </option>
+
+<option value="       SE _SUECIA_N">SUECIA                        </option>
+
+<option value="       CH _SUICA_N">SUICA                         </option>
+
+<option value="       SR _SURINAME_N">SURINAME                      </option>
+
+<option value="       TJ _TADJIQUISTAO_N">TADJIQUISTAO                  </option>
+
+<option value="       TH _TAILANDIA_N">TAILANDIA                     </option>
+
+<option value="       TW _TAIWAN_N">TAIWAN                        </option>
+
+<option value="       TZ _TANZANIA_N">TANZANIA                      </option>
+
+<option value="       CZ _TCHECA REPUBLICA_N">TCHECA REPUBLICA              </option>
+
+<option value="       TF _TERRAS AUSTR. E ANTART. DA FR_N">TERRAS AUSTR. E ANTART. DA FR </option>
+
+<option value="       TL _TIMOR LESTE_N">TIMOR LESTE                   </option>
+
+<option value="       TG _TOGO_N">TOGO                          </option>
+
+<option value="       TO _TONGA_N">TONGA                         </option>
+
+<option value="       TK _TOQUELAU_N">TOQUELAU                      </option>
+
+<option value="       TT _TRINIDAD E TOBAGO_N">TRINIDAD E TOBAGO             </option>
+
+<option value="       XE _TRISTAO DA CUNHA_N">TRISTAO DA CUNHA              </option>
+
+<option value="       TN _TUNISIA_N">TUNISIA                       </option>
+
+<option value="       TC _TURCKS E CAICOS_N">TURCKS E CAICOS               </option>
+
+<option value="       TM _TURCOMENISTAO_N">TURCOMENISTAO                 </option>
+
+<option value="       TR _TURQUIA_S">TURQUIA                       </option>
+
+<option value="       TV _TUVALU_N">TUVALU                        </option>
+
+<option value="       UA _UCRANIA_S">UCRANIA                       </option>
+
+<option value="       UG _UGANDA_S">UGANDA                        </option>
+
+<option value="       UY _URUGUAI_N">URUGUAI                       </option>
+
+<option value="       UZ _UZBEQUISTAO_N">UZBEQUISTAO                   </option>
+
+<option value="       VU _VANUATU_N">VANUATU                       </option>
+
+<option value="       VA _VATICANO_S">VATICANO                      </option>
+
+<option value="       VE _VENEZUELA_S">VENEZUELA                     </option>
+
+<option value="       VN _VIETNA_S">VIETNA                        </option>
+
+<option value="       VI _VIRGENS AMERICANAS_N">VIRGENS AMERICANAS            </option>
+
+<option value="       VG _VIRGENS BRITANICAS_N">VIRGENS BRITANICAS            </option>
+
+<option value="       XF _WAKE_N">WAKE                          </option>
+
+<option value="       WF _WALLIS E FUTUNA_N">WALLIS E FUTUNA               </option>
+
+<option value="       ZM _ZAMBIA_S">ZAMBIA                        </option>
+
+<option value="       ZW _ZIMBABUE_N">ZIMBABUE                      </option>
+
+</select>
+</span>
+</div>    
+<div class="separator"></div>
+<div>    
+<span>
+<b>Cidade de destino:</b><br />
+<input name="cid_no" id="cid_no" type="text" size="30" onchange="document.getElementById('cid_nu').value='';" value="" onkeypress="return eliminaNumerico(event)" onpaste="return false;" />
+<div id="cf_window1771879452771950" class="x-hidden" style="visibility: hidden;">
+	
+	
+	
+ </div>
+<a href="JavaScript:BuscarCidade();" title="Digite no mínimo as duas primeiras letras do nome da cidade e clique na lupa para pesquisa."><img src="http://www2.correios.com.br/sistemas/efi/geral/img/pesquisa.gif" border="0" /></a>
+
+<input name="cid_nu" id="cid_nu" type="hidden" value="-1" />
+<input name="cidadeAtendida" type="hidden" value="true" />
+</span>
+</div>    
+<div class="separator"></div>
+<div>    
+<span>
+<strong>Tipo da embalagem</strong> <br />
+<input type="radio" name="obj_in_embalagem" id="obj_in_embalagemC" value="C" onclick="mostraCaixasEnvelopes(document.getElementById('obj_in_embalagemC').value);LimpaCampo();" />Caixa
+<input type="radio" name="obj_in_embalagem" id="obj_in_embalagemE" value="E" onclick="mostraCaixasEnvelopes(document.getElementById('obj_in_embalagemE').value);LimpaCampo();" />Envelope
+</span>
+<span id="mostraCaixas" class="invisivel" colspan="2" style="display:none">
+<strong>Tamanho da caixa</strong> (em centímetros)<br />
+<select name="tamanhoCaixa" id="tamanhoCaixa" onchange="salvaDimensoes(this, 'caixa')">
+<option value="">&lt;&lt; Selecione &gt;&gt;</option>		
+<option value="2">Caixa 2: 27,0 x 18,0 x 9</option>		
+<option value="4">Caixa 4: 36,0 x 27,0 x 18,0</option>		
+<option value="6">Outra caixa</option>
+</select>
+<input type="hidden" name="profundidadeCaixa" id="profundidadeCaixa" value="" />
+<input type="hidden" name="larguraCaixa" id="larguraCaixa" value="" />
+<input type="hidden" name="alturaCaixa" id="alturaCaixa" value="" />
+</span>
+<span id="mostraEnvelopes" class="invisivel" colspan="2" style="display:none">
+<strong>Tamanho do Envelope</strong> (em centímetros)<br />
+<select name="tamanhoEnvelope" id="tamanhoEnvelope" onchange="salvaDimensoes(this, 'envelope')">
+<option value="">&lt;&lt; Selecione &gt;&gt;</option>
+<option value="1">Envelope médio: 35,3 x 25 </option>
+<option value="2">Envelope grande: 40 x 28 </option>
+<option value="6">Outro Envelope</option>
+</select>
+<input type="hidden" name="profundidadeEnvelope" id="profundidadeEnvelope" value="" />
+<input type="hidden" name="larguraEnvelope" id="larguraEnvelope" value="" />
+<input type="hidden" name="alturaEnvelope" id="alturaEnvelope" value="" />
+</span>
+</div>    
+<div class="separator"></div>
+<div>    
+<span id="mostraDimensoes" class="invisivel" style="display:none">
+<strong>Dimensões</strong> (em centímetros)<br />
+<span>
+<input type="Text" name="obj_nu_profundidade" id="obj_nu_profundidade" value="" size="5" maxlength="5" onblur="eliminaNaoNumerico(this);" />
+</span>
+<span id="escondeLarguraEnvelope">
+ <b>X</b> 
+<input type="Text" name="obj_nu_largura" id="obj_nu_largura" value="" size="5" maxlength="5" onkeydown="eliminaNaoNumerico(this)" />
+</span>
+ <b>X</b> 
+<input type="Text" name="obj_nu_altura" id="obj_nu_altura" value="" size="5" maxlength="5" onkeydown="eliminaNaoNumerico(this)" />
+<div class="separator"></div>
+<font size="1">Comprimento<label id="escondeTextoLargura"> X Largura</label> X Altura</font>
+</span>
+</div>   
+<div>
+<br />
+<span>
+Caso a cidade solicitada não esteja disponível para consulta, favor abrir uma solicitação de informação no 
+<a href="http://www2.correios.com.br/sistemas/falecomoscorreios/">Fale com os Correios</a> que iremos avaliar a possibilidade de inclusão da cidade para postagem.
+</span>
+</div> 
+<div class="btnform">
+<input type="Button" onclick="validar(form1, 'http://www2.correios.com.br/sistemas/efi/consulta/precos/resultado.cfm', 'http://www2.correios.com.br/sistemas/efi/realizarprepostagem/dsp/');" value=" Continuar &gt;&gt; " class="btn2 float-right" />
+<input type="hidden" name="itemSelecionado" value="" />		
+</div>
+</form>
+
+</div>
+</div>
+</div>
+<script language="JavaScript" type="text/javascript">
+if (document.getElementById('obj_in_embalagemC').checked) {
+mostraCaixasEnvelopes(document.getElementById('obj_in_embalagemC').value);
+if (document.getElementById('tamanhoCaixa').value == '6')
+salvaDimensoes(document.getElementById('tamanhoCaixa'), 'caixa');
+}
+if (document.getElementById('obj_in_embalagemE').checked) {
+mostraCaixasEnvelopes(document.getElementById('obj_in_embalagemE').value);
+if (document.getElementById('tamanhoEnvelope').value == '6')
+salvaDimensoes(document.getElementById('tamanhoEnvelope'), 'envelope');
+}
+</script> 
+</div>
+</div>
+<br class="clr" />
+</div>
+</div>
+</div>
+</div><!-- class="wrap" -->
+<!-- laminas -->
+<div class="footer">
+  <div class="wrap">
+    
+      <div class="column-footer">
+        <h3><a href="sistemas/falecomoscorreios">Fale com os Correios</a></h3>
+        <ul>
+          <li class="node"><a href="sistemas/falecomoscorreios">Manifestação via Internet</a>
+            <ul>
+              <li><a href="sistemas/falecomoscorreios">Fale Conosco pelo site</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/falecomoscorreios">Atendimento telefônico</a>
+            <ul>
+              <li>3003 0100 (Capitais e Região Metropolitanas)</li>
+              <li>0800 725 7282 (Demais localidades)</li>
+              <li>0800 725 0100 (Sugestões ou reclamações)</li>
+              <li>0800 725 0898 (exclusivo para portadores <br />
+                de deficiência auditiva) </li>
+              <li>3003 1383 (Informações Banco Postal)</li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/agencias/">Rede de atendimento</a>
+            <ul>
+              <li><a href="sistemas/agencias">Consulte endereços e horários de atendimentos <br />
+                das agências dos Correios</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/ouvidoria">Ouvidoria</a> </li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Portal Correios</a></h3>
+        <ul>
+          <li><a href="http://www.correios.com.br/sitemap">Mapa do site</a></li>
+          <li><a href="sistemas/rastreamento/default.cfm">Rastreamento de objetos</a></li>
+          
+          <li><a href="http://www.mc.gov.br/">Ministério das Comunicações</a></li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Outros sites dos Correios</a></h3>
+        <ul>
+          
+          <li><a href="http://shopping.correios.com.br/correiosonline">Loja virtual dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/correios">Blog dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/filatelia">Espaço da Filatelia</a></li>
+          <li><a href="http://m.correios.com.br/">Correios Mobile</a></li>
+          <li><a href="http://www2.correios.com.br/">Sistemas dos Correios</a></li>
+        </ul>
+      </div>
+      <div class="copy"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/politica-de-privacidade-e-notas-legais/">Política de Privacidade e notas legais</a> -  © Copyright  2014 Correios - Todos os direitos reservados. </div>
+      
+  </div>
+  
+</div>
+ 
+</div>
+<!-- class="back" -->
+
+<script type="text/javascript">
+
+ddaccordion.init({
+	headerclass: "expo", //Shared CSS class name of headers group
+	contentclass: "dados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+	}
+})
+
+ddaccordion.init({
+	headerclass: "abarotulo", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			
+	}
+})
+
+
+/*Agencias*/
+ddaccordion.init({
+	headerclass: "expodados", //Shared CSS class name of headers group
+	contentclass: "contentexpodados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function iconeAbaMouseOut(){
+	$('ul.iconeaba').mouseleave(function() {
+		ddaccordion.collapseall('abarotulo');
+	});	
+}
+function produtosAZMouseOut(){
+	$('div.produtosaz').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+function produtosAZtrocaMostraTudo(){
+	$('#abreTudo').css('display','block');
+	$('#abreFecha a').click(function() {
+		$("#abreFecha a").toggle();
+	});	
+}
+
+function cbDivMouseOut(){
+	$('div.cbDiv').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+$(document).ready(function(){
+	iconeAbaMouseOut();
+	produtosAZMouseOut();
+	produtosAZtrocaMostraTudo();
+	cbDivMouseOut();
+	
+});
+
+
+</script><style type="text/css">
+.dados{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.submenu{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.contentexpodados{display: none}
+a.hiddenajaxlink{display: none}
+</style> <script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#nav a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent", // the class of the content you are hiding until the tab is clicked
+			//showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: 1, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+</script> 		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".inline2").colorbox({inline:true, width:"340px"});
+				$(".inline3").colorbox({inline:true, width:"70%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-564464-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-564464-1');
+</script>
+
+
+
+ 
+
+<!-- contentobjects: page generated at 2017-10-30 01:47 PM -->
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 20px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div class="x-css-shadow" role="presentation" id="ext-gen1027" style="z-index: 19000; left: -9996px; top: -9996px; width: 846px; height: 346px; box-shadow: rgb(136, 136, 136) 0px 0px 4px; display: none;"></div><div class="x-window x-layer x-window-default x-closable x-window-closable x-window-default-closable x-hide-offsets" style="left: -10000px; top: -10000px; width: 850px; height: 350px; z-index: 19001;" id="window-1009" tabindex="-1"><div class="x-window-header x-window-header-draggable x-docked x-window-header-default x-horizontal x-window-header-horizontal x-window-header-default-horizontal x-top x-window-header-top x-window-header-default-top x-docked-top x-window-header-docked-top x-window-header-default-docked-top x-unselectable" id="window-1009_header" style="user-select: none; left: -1px; top: -1px; width: 850px;"><div id="window-1009_header-body" class="x-window-header-body x-window-header-body-default x-window-header-body-horizontal x-window-header-body-default-horizontal x-window-header-body-top x-window-header-body-default-top x-window-header-body-docked-top x-window-header-body-default-docked-top x-window-header-body-default-horizontal x-window-header-body-default-top x-window-header-body-default-docked-top x-box-layout-ct" style="width: 838px;"><div id="window-1009_header-innerCt" class="x-box-inner " role="presentation" style="width: 838px; height: 16px;"><div id="window-1009_header-targetEl" style="position: absolute; width: 838px; left: 0px; top: 0px; height: 1px;"><div class="x-component x-window-header-text-container x-box-item x-component-default" style="text-align: left; left: 0px; top: 0px; margin: 0px; width: 821px;" id="window-1009_header_hd"><span id="window-1009_header_hd-textEl" class="x-window-header-text x-window-header-text-default">Cidade</span></div><div class="x-tool x-box-item x-tool-default" style="width: 16px; height: 16px; left: 822px; top: 0px; margin: 0px;" id="tool-1011"><img id="tool-1011-toolEl" src="/cfscripts/ajax/resources/ext/images/default/s.gif" class="x-tool-close" role="presentation" /></div></div></div></div></div><div id="window-1009-body" class="x-window-body x-window-body-default x-closable x-window-body-closable x-window-body-default-closable x-window-body-default x-window-body-default-closable x-layout-fit" style="overflow: auto; width: 840px; height: 320px; left: 0px; top: 20px;"><div class="x-panel x-fit-item x-window-item x-panel-default" id="panel-1010" style="margin: 0px; width: 838px; height: 318px;"><div id="panel-1010-body" class="x-panel-body x-panel-body-default x-panel-body-default" style="overflow: auto; font-size: 1.15em;">
+	
+	
+	<div id="WindowCidade-body" class="" style="overflow:auto; font-size:1.15em;;height:100%;">
+		
+		
+	 </div>
+ <div id="panel-1010-clearEl" class="x-clear" role="presentation"></div></div></div></div><div id="window-1009-north-handle" class="x-resizable-handle x-window-handle x-resizable-handle-north x-unselectable" style="user-select: none;"></div><div id="window-1009-south-handle" class="x-resizable-handle x-window-handle x-resizable-handle-south x-unselectable" style="user-select: none;"></div><div id="window-1009-east-handle" class="x-resizable-handle x-window-handle x-resizable-handle-east x-unselectable" style="user-select: none;"></div><div id="window-1009-west-handle" class="x-resizable-handle x-window-handle x-resizable-handle-west x-unselectable" style="user-select: none;"></div><div id="window-1009-northeast-handle" class="x-resizable-handle x-window-handle x-resizable-handle-northeast x-unselectable" style="user-select: none;"></div><div id="window-1009-northwest-handle" class="x-resizable-handle x-window-handle x-resizable-handle-northwest x-unselectable" style="user-select: none;"></div><div id="window-1009-southeast-handle" class="x-resizable-handle x-window-handle x-resizable-handle-southeast x-unselectable" style="user-select: none;"></div><div id="window-1009-southwest-handle" class="x-resizable-handle x-window-handle x-resizable-handle-southwest x-unselectable" style="user-select: none;"></div></div></body></html>
