@@ -9,10 +9,11 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
   And sistema apresenta tela de calculo de precos e prazos
   And clico o botao "<botao1>"
   And sistema apresenta o frame "<tituloTela1>"
-  And preencho no formulario "<nomeFormulario1>" o campo "<nomeCampo1>" com o valor "<valorCampo1>"
+  And preencho no formulario "<nomeFormulario1>" o campo "<nomeCampo1>" com o valor "<logradouro>"
   And clico o botao 'Buscar'
-  And sistema apresenta o resultado da busca "<resultado_busca>"
-  Then procuro os resultados contendo 
+  And sistema apresenta a tela de resultado da busca "<resultado_busca>"
+  Then close
+#  Then procuro os resultados contendo "<logradouro>" e "<cidade_UF>" e "<numero>"
 #  And preencho 'CEP de origem' "<cep_origem>"
 #  And preencho 'CEP de destino' "<cep_destino>"
 #  And seleciono 'Tipo do servico' "<tipo_servico>"
@@ -20,6 +21,6 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
 #  Then sistema apresenta tela de resultado do calculo de precos e prazos "<validacao>"
   
 Examples:
-   | url                                  | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | valorCampo1              | resultado_busca                |
-   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. |
+   | url                                  | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | logradouro               | resultado_busca                | cidade_UF | numero |
+   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. | Osasco/SP | 197    |
    

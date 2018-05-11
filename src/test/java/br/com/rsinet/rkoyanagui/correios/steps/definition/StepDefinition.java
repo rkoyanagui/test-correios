@@ -118,6 +118,7 @@ public class StepDefinition {
 	
 	@When("^clico o botao \"([^\"]*)\"$")
 	public void clico_o_botao(String botao) throws Throwable {
+	    stepB.salvarContextoWindow();
 	    stepB.clicarBotao(botao);
 	}
 	
@@ -138,8 +139,21 @@ public class StepDefinition {
 	    stepB.clicarInput("Geral");
 	}
 	
-	@When("^sistema apresenta o resultado da busca \"([^\"]*)\"$")
-	public void sistema_apresenta_o_resultado_da_busca(String texto) throws Throwable {
+	@When("^sistema apresenta a tela de resultado da busca \"([^\"]*)\"$")
+	public void sistema_apresenta_a_tela_de_resultado_da_busca(String texto) throws Throwable {
 	    stepB.validarTexto(texto);
+	}
+	
+	@Then("^procuro os resultados contendo \"([^\"]*)\" e \"([^\"]*)\" e \"([^\"]*)\"$")
+	public void procuro_os_resultados_contendo(
+			String logradouro, String cidadeUF, String numero) throws Throwable
+	{
+	    stepB.encontrarCepNaTabelaDoResultadoDeBuscaPorEndereco(logradouro, cidadeUF, numero);
+	}
+	
+	@Then("^close$")
+	public void close()
+	{
+		stepB.close();
 	}
 }

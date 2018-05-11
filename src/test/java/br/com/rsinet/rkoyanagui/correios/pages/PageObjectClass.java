@@ -69,6 +69,10 @@ public class PageObjectClass extends PageObject{
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
 	
+	public WebElement getCloseButton() {
+		return this.find(By.xpath("//div[@id=\"cboxClose\"][contains(text(), \"close\")]"));
+	}
+	
 	public void switchToWindow(String windowHandle) {
 		WebDriver driver = this.getDriver();
 		driver.switchTo().window(windowHandle);
@@ -85,6 +89,14 @@ public class PageObjectClass extends PageObject{
 		abas.addAll(driver.getWindowHandles());
 		return abas.get(counter);
 	}
+	/*
+	public List<WebElement> contarNaTabelaTodasOcorrencias (String text)
+	{
+		List<WebElement> list = new ArrayList<WebElementFacade>();
+		WebElement facade = new WebElementFacade();
+		this.f
+		list = this.findAll(By.xpath("//table/tbody/tr/td/a[contains(text(), \"" + text + "\")]"));
+	}*/
 	
 	/**
 	 * @return o primeiro elemento, de qualquer tag ou tipo, que

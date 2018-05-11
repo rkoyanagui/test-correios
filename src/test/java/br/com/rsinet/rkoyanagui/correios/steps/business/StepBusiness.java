@@ -2,6 +2,8 @@ package br.com.rsinet.rkoyanagui.correios.steps.business;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.junit.Assert;
@@ -14,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import io.openbdt.element.WebBrowserScreenElement;
+import jline.internal.Log;
 import br.com.rsinet.rkoyanagui.correios.pages.PageObjectClass;
 import jxl.common.Logger;
 import net.serenitybdd.core.annotations.findby.By;
@@ -24,6 +27,9 @@ public class StepBusiness {
 	PageObjectClass page;
 	
 	Logger LOG = Logger.getLogger(StepBusiness.class);
+	
+	WebDriver driver;
+	List<String> abas = new ArrayList<String>();
 	
 	@Autowired
 	private WebBrowserScreenElement viewElement; // OBJETO QUE CONTÉM MÉTODOS PRÓPRIOS DO FRAMEWORK
@@ -143,6 +149,11 @@ public class StepBusiness {
 		viewElement.click(page.getBotao(botao));
 	}
 	
+	public void salvarContextoWindow() {
+		driver = page.getDriver();
+		abas.addAll(driver.getWindowHandles());
+	}
+	
 	public void mudarContextoParaFrame(String ancestorId) {
 		viewElement.waitForElementIsPresent(10, page.getFrame(ancestorId));
 		page.switchToFrame(page.getFrame(ancestorId));
@@ -165,5 +176,41 @@ public class StepBusiness {
 	public void validarTexto(String texto) {
 		viewElement.waitForElementIsPresent(10, page.getText(texto));
 		Assert.assertEquals(texto, page.getText(texto).getText());
+	}
+	
+	private List<WebElement> encontrarNaTabelaTodasLinhasContendo(String text)
+	{
+		return viewElement.findElements(By.xpath(
+				"//table/tbody//*[contains(text(), \"" + text + "\")]/ancestor::tr"));
+	}
+	
+	public void encontrarCepNaTabelaDoResultadoDeBuscaPorEndereco(
+			String logradouro, String cidadeUF, String numero)
+	{
+		List<WebElement> listRows = this.encontrarNaTabelaTodasLinhasContendo(logradouro);
+		List<String> listTextUnicoNumero = new ArrayList<String>();
+		
+		//Regex para logradouro seguido de vírgula e um e somente um número
+		//de endereço (grandes clientes dos Correios, tendo um CEP só deles).
+		//Pattern patternLogradouroUnicoNumero = Pattern.compile("(" + logradouro + ", )(\\d+)(\\D*)");
+		Pattern patternLogradouroUnicoNumero = Pattern.compile("(.*?)(\\d+)(.*)");
+		for (WebElement row : listRows)
+		{
+			Log.info(row.getText());
+//			Matcher matcher = patternLogradouroUnicoNumero.matcher(row.getText());
+//			//Log.info("AAAAAAAAAAAAAAAAAAAAAAAA: " + m.group(2));
+//			if (matcher.matches())
+//			{
+//				Log.info("AAAAAAAAAAAAAAAAAAAAAAAA: " + matcher.group(2));
+//			}
+//			matcher.reset();
+		}
+		Assert.assertFalse(false);
+	}
+
+	public void close() {
+		driver.switchTo().defaultContent();
+		viewElement.waitForElementIsPresent(10, page.getCloseButton());
+		viewElement.click(page.getCloseButton());
 	}
 }
