@@ -69,10 +69,6 @@ public class PageObjectClass extends PageObject{
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
 	
-	public WebElement getCloseButton() {
-		return this.find(By.xpath("//div[@id=\"cboxClose\"][contains(text(), \"close\")]"));
-	}
-	
 	public void switchToWindow(String windowHandle) {
 		WebDriver driver = this.getDriver();
 		driver.switchTo().window(windowHandle);

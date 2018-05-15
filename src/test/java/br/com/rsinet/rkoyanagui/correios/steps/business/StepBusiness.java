@@ -1,6 +1,7 @@
 package br.com.rsinet.rkoyanagui.correios.steps.business;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -30,6 +31,7 @@ public class StepBusiness {
 	
 	WebDriver driver;
 	List<String> abas = new ArrayList<String>();
+	String cep;
 	
 	@Autowired
 	private WebBrowserScreenElement viewElement; // OBJETO QUE CONTÉM MÉTODOS PRÓPRIOS DO FRAMEWORK
@@ -166,6 +168,7 @@ public class StepBusiness {
 	}
 	
 	public void preencherValor(String nomeFormulario, String nomeCampo, String valor) {
+		viewElement.waitForElementIsPresent(10, page.getInput(nomeFormulario, nomeCampo));
 		viewElement.sendText(page.getInput(nomeFormulario, nomeCampo), valor);
 	}
 	
@@ -184,33 +187,166 @@ public class StepBusiness {
 				"//table/tbody//*[contains(text(), \"" + text + "\")]/ancestor::tr"));
 	}
 	
-	public void encontrarCepNaTabelaDoResultadoDeBuscaPorEndereco(
+	public void encontrarCepNaTabelaPorBairro(
+			String logradouro, String cidadeUF, String bairro)
+	{
+		List<WebElement> listaLinhas = this.encontrarNaTabelaTodasLinhasContendo(logradouro);
+		List<String> listaOriginal = new ArrayList<String>();
+		
+		Log.info("BAIRRO: " + bairro);
+		
+		//Regex para buscar por bairro.
+		Pattern patternBairro = Pattern.compile(
+						"(" + logradouro + "\\t)(" + bairro + ")(\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Loop para adicionar o texto das linhas (WebElement) em listaTextoOriginal,
+		//passando somente as linhas que contêm cidadeUF.
+		for (WebElement linha : listaLinhas)
+		{
+			String textoDaLinha = linha.getText();
+			if (textoDaLinha.contains(cidadeUF))
+			{
+				textoDaLinha = textoDaLinha.replaceAll("\\s", " ");
+				textoDaLinha = textoDaLinha.replaceAll("  ", "\t");
+				listaOriginal.add(textoDaLinha);
+			}
+		}
+		
+		if (bairro != "")
+		{
+			Log.info("-----------------matcherBairro-----------------");
+			Iterator<String> it = listaOriginal.iterator();
+			String bairroAvaliado = "";
+			cep = "";
+			while (it.hasNext() && !bairro.equals(bairroAvaliado))
+			{
+				String linhaInteira = it.next();
+				Log.info(linhaInteira);
+				Matcher matcher = patternBairro.matcher(linhaInteira);
+				if (matcher.matches())
+				{
+					bairroAvaliado = matcher.group(2);
+					cep = matcher.group(4);
+					Log.info("BAIRROOOOOOOOOOO: " + bairroAvaliado + "\t" + cep);
+				}
+				matcher.reset();
+			}
+			if (!bairro.equals(bairroAvaliado))
+			{
+				Log.info("O bairro " + bairro + " não foi encontrado.");
+				Assert.assertTrue(false);
+			} else
+			{
+				Log.info("Bairro procurado: " + bairro + "\tCEP encontrado: " + cep);
+				Assert.assertTrue(true);
+			}
+		} else
+		{
+			Log.info("O parâmetro de busca por 'bairro' não pode ser vazio. Preencha-o "
+					+ "ou use o parâmetro de busca por 'número do endereço'.");
+			Assert.assertTrue(false);
+		}
+	}
+	
+	public void encontrarCepNaTabelaPorNumero(
 			String logradouro, String cidadeUF, String numero)
 	{
-		List<WebElement> listRows = this.encontrarNaTabelaTodasLinhasContendo(logradouro);
-		List<String> listTextUnicoNumero = new ArrayList<String>();
+		List<WebElement> listaLinhas = this.encontrarNaTabelaTodasLinhasContendo(logradouro);
+		List<String> listaOriginal = new ArrayList<String>();
+		Integer numeroInteiroProcurado = Integer.parseInt(numero);
 		
 		//Regex para logradouro seguido de vírgula e um e somente um número
 		//de endereço (grandes clientes dos Correios, tendo um CEP só deles).
-		//Pattern patternLogradouroUnicoNumero = Pattern.compile("(" + logradouro + ", )(\\d+)(\\D*)");
-		Pattern patternLogradouroUnicoNumero = Pattern.compile("(.*?)(\\d+)(.*)");
-		for (WebElement row : listRows)
+		Pattern patternGrandesClientes = Pattern.compile(
+						"(" + logradouro + ", )(\\d+)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "até N" do lado ímpar.
+		Pattern patternIntervaloNumericoAteLadoImpar = Pattern.compile(
+						"(" + logradouro + " - )(até )(\\d+)( - lado ímpar)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "até N" do lado par.
+		Pattern patternIntervaloNumericoAteLadoPar = Pattern.compile(
+				"(" + logradouro + " - )(até )(\\d+)( - lado par)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Loop para adicionar o texto das linhas (WebElement) em listaTextoOriginal,
+		//passando somente as linhas que contêm cidadeUF.
+		for (WebElement linha : listaLinhas)
 		{
-			Log.info(row.getText());
-//			Matcher matcher = patternLogradouroUnicoNumero.matcher(row.getText());
-//			//Log.info("AAAAAAAAAAAAAAAAAAAAAAAA: " + m.group(2));
-//			if (matcher.matches())
-//			{
-//				Log.info("AAAAAAAAAAAAAAAAAAAAAAAA: " + matcher.group(2));
-//			}
-//			matcher.reset();
+			String textoDaLinha = linha.getText();
+			if (textoDaLinha.contains(cidadeUF))
+			{
+				textoDaLinha = textoDaLinha.replaceAll("\\s", " ");
+				textoDaLinha = textoDaLinha.replaceAll("  ", "\t");
+				listaOriginal.add(textoDaLinha);
+			}
 		}
-		Assert.assertFalse(false);
+		
+		Log.info("-----------------matcherCompleto-----------------");
+		Iterator<String> it = listaOriginal.iterator();
+		String numeroAvaliado = "";
+		cep = "";
+		boolean numeroEncontrado = false;
+		while (it.hasNext() && !numeroEncontrado)
+		{
+			String linhaInteira = it.next();
+			Log.info(linhaInteira);
+			//GrandesClientes
+			Matcher matcher = patternGrandesClientes.matcher(linhaInteira);
+			if (matcher.matches())
+			{
+				numeroAvaliado = matcher.group(2);
+				cep = matcher.group(4);
+				Log.info("MATCHGrandesClientes: " + numeroAvaliado + "\tCEP: " + cep);
+				matcher.reset();
+				if (numero.equals(numeroAvaliado)) { numeroEncontrado = true; }
+			} else 
+			{
+				//NumeroAteLadoImpar
+				matcher = patternIntervaloNumericoAteLadoImpar.matcher(linhaInteira);
+				if (matcher.matches())
+				{
+					numeroAvaliado = matcher.group(3);
+					cep = matcher.group(6);
+					Log.info("MATCHAteNumeroImpar: até " + numeroAvaliado + "\tCEP: " + cep);
+					matcher.reset();
+					if (1 <= numeroInteiroProcurado &&
+							numeroInteiroProcurado <= Integer.parseInt(numeroAvaliado))
+					{
+						numeroEncontrado = true;
+					}
+				} else
+				{
+					//NumeroAteLadoPar
+					matcher = patternIntervaloNumericoAteLadoPar.matcher(linhaInteira);
+					if (matcher.matches())
+					{
+						numeroAvaliado = matcher.group(3);
+						cep = matcher.group(6);
+						Log.info("MATCHAteNumeroImpar: até " + numeroAvaliado + "\tCEP: " + cep);
+						matcher.reset();
+						if (1 <= numeroInteiroProcurado &&
+								numeroInteiroProcurado <= Integer.parseInt(numeroAvaliado))
+						{
+							numeroEncontrado = true;
+						}
+					}
+				}
+			}
+		} //Fim do while
+		
+		if (!numeroEncontrado)
+		{
+			Log.info("O número " + numero + " não foi encontrado.");
+			Assert.assertTrue(false);
+		} else
+		{
+			Log.info("Número procurado: " + numero + "\tCEP encontrado: " + cep);
+			Assert.assertTrue(true);
+		}
+		
 	}
 
-	public void close() {
+	public void retornarTelaPrincipal() {
 		driver.switchTo().defaultContent();
-		viewElement.waitForElementIsPresent(10, page.getCloseButton());
-		viewElement.click(page.getCloseButton());
 	}
 }

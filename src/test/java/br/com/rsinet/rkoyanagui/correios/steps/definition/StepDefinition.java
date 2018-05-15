@@ -144,16 +144,17 @@ public class StepDefinition {
 	    stepB.validarTexto(texto);
 	}
 	
-	@Then("^procuro os resultados contendo \"([^\"]*)\" e \"([^\"]*)\" e \"([^\"]*)\"$")
+	@When("^procuro os resultados contendo \"([^\"]*)\" e \"([^\"]*)\" e \"([^\"]*)\" e \"([^\"]*)\"$")
 	public void procuro_os_resultados_contendo(
-			String logradouro, String cidadeUF, String numero) throws Throwable
+			String logradouro, String cidadeUF, String numero, String bairro) throws Throwable
 	{
-	    stepB.encontrarCepNaTabelaDoResultadoDeBuscaPorEndereco(logradouro, cidadeUF, numero);
+	    //stepB.encontrarCepNaTabelaPorBairro(logradouro, cidadeUF, bairro);
+		stepB.encontrarCepNaTabelaPorNumero(logradouro, cidadeUF, numero);
 	}
 	
-	@Then("^close$")
-	public void close()
+	@Then("^retorno para a tela principal$")
+	public void retorno_para_a_tela_principal()
 	{
-		stepB.close();
+		stepB.retornarTelaPrincipal();
 	}
 }

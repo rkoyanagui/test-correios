@@ -12,7 +12,8 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
   And preencho no formulario "<nomeFormulario1>" o campo "<nomeCampo1>" com o valor "<logradouro>"
   And clico o botao 'Buscar'
   And sistema apresenta a tela de resultado da busca "<resultado_busca>"
-  Then close
+  And procuro os resultados contendo "<logradouro>" e "<cidade_UF>" e "<numero>" e "<bairro>"
+  Then retorno para a tela principal
 #  Then procuro os resultados contendo "<logradouro>" e "<cidade_UF>" e "<numero>"
 #  And preencho 'CEP de origem' "<cep_origem>"
 #  And preencho 'CEP de destino' "<cep_destino>"
@@ -21,6 +22,6 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
 #  Then sistema apresenta tela de resultado do calculo de precos e prazos "<validacao>"
   
 Examples:
-   | url                                  | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | logradouro               | resultado_busca                | cidade_UF | numero |
-   | http://www.correios.com.br/para-voce | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. | Osasco/SP | 197    |
+   | url                                            | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | logradouro               | resultado_busca                | cidade_UF                | numero | bairro         |
+   | http://www.correios.com.br/?set_language=pt-br | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. | Osasco/SP                | 198    | Vila São Paulo |
    
