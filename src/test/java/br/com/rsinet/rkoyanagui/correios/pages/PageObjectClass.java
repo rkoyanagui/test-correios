@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -162,7 +164,8 @@ public class PageObjectClass extends PageObject{
 	 * 
 	 * @param frame é uma referência do tipo WebElement para um <b>iframe</b>.
 	*/
-	public void switchToFrame(WebElement frame) {
+	public void switchToFrame(WebElement frame)
+			throws NoSuchFrameException, StaleElementReferenceException {
 		this.getDriver().switchTo().frame(frame);
 	}
 	
@@ -174,7 +177,8 @@ public class PageObjectClass extends PageObject{
 	 * @param ancestorId é o id de algum dos ancestrais
 	 * (de qualquer nível) do iframe buscado.
 	*/
-	public void switchToFrame(String ancestorId) {
+	public void switchToFrame(String ancestorId)
+			throws NoSuchFrameException, StaleElementReferenceException {
 		WebElement selectedFrame = this.find(By.xpath(
 				"//*[@id=\"" + ancestorId + "\"]//iframe[1]" ));
 		this.getDriver().switchTo().frame(selectedFrame);
@@ -190,7 +194,8 @@ public class PageObjectClass extends PageObject{
 	 * o contexto é transferido: se é para o primeiro encontrado (1), ou
 	 * para o segundo (2), etc.
 	*/
-	public void switchToFrame(int counter) throws IllegalArgumentException {
+	public void switchToFrame(int counter)
+			throws IllegalArgumentException, NoSuchFrameException, StaleElementReferenceException {
 		if (counter < 1) {
 			throw new IllegalArgumentException(
 					"Erro: o método \'void PageObjectClass.switchToFrame(int counter)\' "

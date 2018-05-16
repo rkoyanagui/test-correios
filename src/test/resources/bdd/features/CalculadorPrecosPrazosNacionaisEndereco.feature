@@ -22,6 +22,6 @@ Scenario Outline: Calculador de Preços e Prazos Nacionais por Endereco
 #  Then sistema apresenta tela de resultado do calculo de precos e prazos "<validacao>"
   
 Examples:
-   | url                                            | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | logradouro               | resultado_busca                | cidade_UF                | numero | bairro         |
-   | http://www.correios.com.br/?set_language=pt-br | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. | Osasco/SP                | 198    | Vila São Paulo |
+   | url                                            | produto_ou_servico                           | botao1        | tituloTela1          | nomeFormulario1 | nomeCampo1 | logradouro               | resultado_busca                | cidade_UF                | numero | bairro |
+   | http://www.correios.com.br/?set_language=pt-br | Calculador de Preços e Prazos Nacionais      | Não sei o CEP | Busca CEP - Endereço | Geral           | relaxation | Avenida dos Autonomistas | DADOS ENCONTRADOS COM SUCESSO. | Osasco/SP                | 1473   |        |
    

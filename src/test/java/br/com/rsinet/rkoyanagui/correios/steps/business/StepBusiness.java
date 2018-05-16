@@ -9,10 +9,14 @@ import java.util.regex.Pattern;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
@@ -157,19 +161,29 @@ public class StepBusiness {
 	}
 	
 	public void mudarContextoParaFrame(String ancestorId) {
-		viewElement.waitForElementIsPresent(10, page.getFrame(ancestorId));
-		page.switchToFrame(page.getFrame(ancestorId));
+		//viewElement.waitForElementIsPresent(10, page.getFrame(ancestorId));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement frame = wait.until(ExpectedConditions.visibilityOf(page.getFrame(ancestorId)));
+		try {
+		page.switchToFrame(frame);
+		} catch (NoSuchFrameException | StaleElementReferenceException ex) {
+			System.err.println(ex.getMessage());
+		}
 	}
 	
 	public void validarTitulo(String titulo) {
-		viewElement.waitForElementIsPresent(10, page.getHeader(titulo));
-		LOG.info(">> " + page.getHeader(titulo).getText());
-		Assert.assertEquals(titulo, page.getHeader(titulo).getText());
+		//viewElement.waitForElementIsPresent(10, page.getHeader(titulo));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement header = wait.until(ExpectedConditions.visibilityOf(page.getHeader(titulo)));
+		LOG.info(">> " + header.getText());
+		Assert.assertEquals(titulo, header.getText());
 	}
 	
 	public void preencherValor(String nomeFormulario, String nomeCampo, String valor) {
-		viewElement.waitForElementIsPresent(10, page.getInput(nomeFormulario, nomeCampo));
-		viewElement.sendText(page.getInput(nomeFormulario, nomeCampo), valor);
+		//viewElement.waitForElementIsPresent(10, page.getInput(nomeFormulario, nomeCampo));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement input = wait.until(ExpectedConditions.elementToBeClickable(page.getInput(nomeFormulario, nomeCampo)));
+		viewElement.sendText(input, valor);
 	}
 	
 	public void clicarInput(String id_de_busca) {
@@ -253,20 +267,48 @@ public class StepBusiness {
 	{
 		List<WebElement> listaLinhas = this.encontrarNaTabelaTodasLinhasContendo(logradouro);
 		List<String> listaOriginal = new ArrayList<String>();
-		Integer numeroInteiroProcurado = Integer.parseInt(numero);
+		Integer numeroProcurado = Integer.parseInt(numero);
 		
 		//Regex para logradouro seguido de vírgula e um e somente um número
 		//de endereço (grandes clientes dos Correios, tendo um CEP só deles).
 		Pattern patternGrandesClientes = Pattern.compile(
-						"(" + logradouro + ", )(\\d+)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+				"(" + logradouro + ", )(?<numeroAvaliado>\\d+)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
 		
 		//Regex para um intervalo de número "até N" do lado ímpar.
-		Pattern patternIntervaloNumericoAteLadoImpar = Pattern.compile(
-						"(" + logradouro + " - )(até )(\\d+)( - lado ímpar)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		Pattern patternNumeroAteLadoImpar = Pattern.compile(
+				"(" + logradouro + " - )(até )(?<numeroAvaliado>\\d+)( - lado ímpar)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
 		
 		//Regex para um intervalo de número "até N" do lado par.
-		Pattern patternIntervaloNumericoAteLadoPar = Pattern.compile(
-				"(" + logradouro + " - )(até )(\\d+)( - lado par)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		Pattern patternNumeroAteLadoPar = Pattern.compile(
+				"(" + logradouro + " - )(até )(?<numeroAvaliado>\\d+)( - lado par)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "até N1/N2" de ambos os lados par e ímpar.
+		Pattern patternNumeroAteDoisLados = Pattern.compile(
+				"(" + logradouro + " - )(até )(?<numeroAvaliado1>\\d+)(/)(?<numeroAvaliado2>\\d+)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N a M" do lado ímpar.
+		Pattern patternNumeroDeLadoImpar = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliadoDe>\\d+)( a )(?<numeroAvaliadoA>\\d+)( - lado ímpar)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N a M" do lado par.
+		Pattern patternNumeroDeLadoPar = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliadoDe>\\d+)( a )(?<numeroAvaliadoA>\\d+)( - lado par)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N1/N2 a M1/M2" de ambos os lados par e ímpar.
+		Pattern patternNumeroDeDoisLados = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliadoDe1>\\d+)(/)(?<numeroAvaliadoDe2>\\d+)( a )(?<numeroAvaliadoA1>\\d+)(/)(?<numeroAvaliadoA2>\\d+)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N ao fim" do lado ímpar.
+		Pattern patternNumeroDeAoFimLadoImpar = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliado>\\d+)( ao fim)( - lado ímpar)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N ao fim" do lado par.
+		Pattern patternNumeroDeAoFimLadoPar = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliado>\\d+)( ao fim)( - lado par)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
+		
+		//Regex para um intervalo de número "de N1/N2 ao fim" de ambos os lados par e ímpar.
+		Pattern patternNumeroDeAoFimDoisLados = Pattern.compile(
+				"(" + logradouro + " - )(de )(?<numeroAvaliado1>\\d+)(/)(?<numeroAvaliado2>\\d+)( ao fim)(\\t[\\w[ \\Q!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~\\E]]+\\t" + cidadeUF + " )(?<cep>\\d\\d\\d\\d\\d-\\d\\d\\d)", Pattern.UNICODE_CHARACTER_CLASS);
 		
 		//Loop para adicionar o texto das linhas (WebElement) em listaTextoOriginal,
 		//passando somente as linhas que contêm cidadeUF.
@@ -283,7 +325,15 @@ public class StepBusiness {
 		
 		Log.info("-----------------matcherCompleto-----------------");
 		Iterator<String> it = listaOriginal.iterator();
-		String numeroAvaliado = "";
+		Integer numeroAvaliado = 0;
+		Integer numeroAvaliado1 = 0;
+		Integer numeroAvaliado2 = 0;
+		Integer numeroAvaliadoDe = 0;
+		Integer numeroAvaliadoA = 0;
+		Integer numeroAvaliadoDe1 = 0;
+		Integer numeroAvaliadoDe2 = 0;
+		Integer numeroAvaliadoA1 = 0;
+		Integer numeroAvaliadoA2 = 0;
 		cep = "";
 		boolean numeroEncontrado = false;
 		while (it.hasNext() && !numeroEncontrado)
@@ -294,45 +344,159 @@ public class StepBusiness {
 			Matcher matcher = patternGrandesClientes.matcher(linhaInteira);
 			if (matcher.matches())
 			{
-				numeroAvaliado = matcher.group(2);
-				cep = matcher.group(4);
+				numeroAvaliado = Integer.parseInt(matcher.group("numeroAvaliado"));
+				cep = matcher.group("cep");
 				Log.info("MATCHGrandesClientes: " + numeroAvaliado + "\tCEP: " + cep);
-				matcher.reset();
-				if (numero.equals(numeroAvaliado)) { numeroEncontrado = true; }
+				if (numeroProcurado == numeroAvaliado) { numeroEncontrado = true; }
 			} else 
 			{
 				//NumeroAteLadoImpar
-				matcher = patternIntervaloNumericoAteLadoImpar.matcher(linhaInteira);
-				if (matcher.matches())
+				matcher = patternNumeroAteLadoImpar.matcher(linhaInteira);
+				if (numeroProcurado % 2 == 1 && matcher.matches())
 				{
-					numeroAvaliado = matcher.group(3);
-					cep = matcher.group(6);
-					Log.info("MATCHAteNumeroImpar: até " + numeroAvaliado + "\tCEP: " + cep);
-					matcher.reset();
-					if (1 <= numeroInteiroProcurado &&
-							numeroInteiroProcurado <= Integer.parseInt(numeroAvaliado))
+					numeroAvaliado = Integer.parseInt(matcher.group("numeroAvaliado"));
+					cep = matcher.group("cep");
+					Log.info("MATCHNumeroAteLadoImpar: até " + numeroAvaliado + "\tCEP: " + cep);
+					if (1 <= numeroProcurado && numeroProcurado <= numeroAvaliado)
 					{
 						numeroEncontrado = true;
 					}
 				} else
 				{
 					//NumeroAteLadoPar
-					matcher = patternIntervaloNumericoAteLadoPar.matcher(linhaInteira);
-					if (matcher.matches())
+					matcher = patternNumeroAteLadoPar.matcher(linhaInteira);
+					if (numeroProcurado % 2 == 0 && matcher.matches())
 					{
-						numeroAvaliado = matcher.group(3);
-						cep = matcher.group(6);
-						Log.info("MATCHAteNumeroImpar: até " + numeroAvaliado + "\tCEP: " + cep);
-						matcher.reset();
-						if (1 <= numeroInteiroProcurado &&
-								numeroInteiroProcurado <= Integer.parseInt(numeroAvaliado))
+						numeroAvaliado = Integer.parseInt(matcher.group("numeroAvaliado"));
+						cep = matcher.group("cep");
+						Log.info("MATCHNumeroAteLadoPar: até " + numeroAvaliado + "\tCEP: " + cep);
+						if (2 <= numeroProcurado && numeroProcurado <= numeroAvaliado)
 						{
 							numeroEncontrado = true;
 						}
-					}
-				}
-			}
-		} //Fim do while
+					} else
+					{
+						//NumeroAteDoisLados
+						matcher = patternNumeroAteDoisLados.matcher(linhaInteira);
+						if (matcher.matches())
+						{
+							numeroAvaliado1 = Integer.parseInt(matcher.group("numeroAvaliado1"));
+							numeroAvaliado2 = Integer.parseInt(matcher.group("numeroAvaliado2"));
+							numeroAvaliado = numeroAvaliado2;
+							if (numeroAvaliado1 > numeroAvaliado2) { numeroAvaliado = numeroAvaliado1; }
+							cep = matcher.group("cep");
+							Log.info("MATCHNumeroAteDoisLados: até " + numeroAvaliado + "\tCEP: " + cep);
+							if (1 <= numeroProcurado && numeroProcurado <= numeroAvaliado)
+							{
+								numeroEncontrado = true;
+							}
+						} else
+						{
+							//NumeroDeLadoImpar
+							matcher = patternNumeroDeLadoImpar.matcher(linhaInteira);
+							if (numeroProcurado % 2 == 1 && matcher.matches())
+							{
+								numeroAvaliadoDe = Integer.parseInt(matcher.group("numeroAvaliadoDe"));
+								numeroAvaliadoA = Integer.parseInt(matcher.group("numeroAvaliadoA"));
+								cep = matcher.group("cep");
+								Log.info("MATCHNumeroDeLadoImpar: de " + numeroAvaliadoDe
+										+ " a " + numeroAvaliadoA + "\tCEP: " + cep);
+								if (numeroAvaliadoDe <= numeroProcurado && numeroProcurado <= numeroAvaliadoA)
+								{
+									numeroEncontrado = true;
+								}
+							} else
+							{
+								//NumeroDeLadoPar
+								matcher = patternNumeroDeLadoPar.matcher(linhaInteira);
+								if (numeroProcurado % 2 == 0 && matcher.matches())
+								{
+									numeroAvaliadoDe = Integer.parseInt(matcher.group("numeroAvaliadoDe"));
+									numeroAvaliadoA = Integer.parseInt(matcher.group("numeroAvaliadoA"));
+									cep = matcher.group("cep");
+									Log.info("MATCHNumeroDeLadoPar: de " + numeroAvaliadoDe
+											+ " a " + numeroAvaliadoA + "\tCEP: " + cep);
+									if (numeroAvaliadoDe <= numeroProcurado && numeroProcurado <= numeroAvaliadoA)
+									{
+										numeroEncontrado = true;
+									}
+								} else
+								{
+									//NumeroDeDoisLados
+									matcher = patternNumeroDeDoisLados.matcher(linhaInteira);
+									if (matcher.matches())
+									{
+										numeroAvaliadoDe1 = Integer.parseInt(matcher.group("numeroAvaliadoDe1"));
+										numeroAvaliadoDe2 = Integer.parseInt(matcher.group("numeroAvaliadoDe2"));
+										numeroAvaliadoDe = numeroAvaliadoDe1;
+										if (numeroAvaliadoDe2 < numeroAvaliadoDe1) { numeroAvaliadoDe = numeroAvaliadoDe2; }
+										numeroAvaliadoA1 = Integer.parseInt(matcher.group("numeroAvaliadoA1"));
+										numeroAvaliadoA2 = Integer.parseInt(matcher.group("numeroAvaliadoA2"));
+										numeroAvaliadoA = numeroAvaliadoA2;
+										if (numeroAvaliadoA1 > numeroAvaliadoA2) { numeroAvaliadoA = numeroAvaliadoA1; }
+										cep = matcher.group("cep");
+										Log.info("MATCHNumeroDeDoisLados: de " + numeroAvaliadoDe
+												+ " a " + numeroAvaliadoA + "\tCEP: " + cep);
+										if (numeroAvaliadoDe <= numeroProcurado && numeroProcurado <= numeroAvaliadoA)
+										{
+											numeroEncontrado = true;
+										}
+									} else
+									{
+										//NumeroDeAoFimLadoImpar
+										matcher = patternNumeroDeAoFimLadoImpar.matcher(linhaInteira);
+										if (numeroProcurado % 2 == 1 && matcher.matches())
+										{
+											numeroAvaliado = Integer.parseInt(matcher.group("numeroAvaliado"));
+											cep = matcher.group("cep");
+											Log.info("MATCHNumeroDeAoFimLadoImpar: de " + numeroAvaliado
+													+ " ao fim\tCEP: " + cep);
+											if (numeroAvaliado <= numeroProcurado)
+											{
+												numeroEncontrado = true;
+											}
+										} else
+										{
+											//NumeroDeAoFimLadoPar
+											matcher = patternNumeroDeAoFimLadoPar.matcher(linhaInteira);
+											if (numeroProcurado % 2 == 0 && matcher.matches())
+											{
+												numeroAvaliado = Integer.parseInt(matcher.group("numeroAvaliado"));
+												cep = matcher.group("cep");
+												Log.info("MATCHNumeroDeAoFimLadoPar: de " + numeroAvaliado
+														+ " ao fim\tCEP: " + cep);
+												if (numeroAvaliado <= numeroProcurado)
+												{
+													numeroEncontrado = true;
+												}
+											} else
+											{
+												//NumeroDeAoFimDoisLados
+												matcher = patternNumeroDeAoFimDoisLados.matcher(linhaInteira);
+												if (matcher.matches())
+												{
+													numeroAvaliado1 = Integer.parseInt(matcher.group("numeroAvaliado1"));
+													numeroAvaliado2 = Integer.parseInt(matcher.group("numeroAvaliado2"));
+													numeroAvaliado = numeroAvaliado1;
+													if (numeroAvaliado2 < numeroAvaliado1) { numeroAvaliado = numeroAvaliado2; }
+													cep = matcher.group("cep");
+													Log.info("MATCHNumeroDeAoFimDoisLados: de " + numeroAvaliado
+															+ " ao fim\tCEP: " + cep);
+													if (numeroAvaliado <= numeroProcurado)
+													{
+														numeroEncontrado = true;
+													}
+												}
+											} //FIM Else NumeroDeAoFimLadoPar
+										} //FIM Else NumeroDeAoFimLadoImpar
+									} //FIM Else NumeroDeDoisLados
+								} //FIM Else NumeroDeLadoPar
+							} //FIM Else NumeroDeLadoImpar
+						} //FIM Else NumeroAteDoisLados
+					} //FIM Else NumeroAteLadoPar
+				} //FIM Else NumeroAteLadoImpar
+			} //FIM Else GrandesClientes
+		} //FIM do while
 		
 		if (!numeroEncontrado)
 		{
