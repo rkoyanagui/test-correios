@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import jline.internal.Log;
 import br.com.rsinet.rkoyanagui.correios.steps.business.StepBusiness;
 import net.thucydides.core.annotations.Steps;
 
@@ -79,6 +80,12 @@ public class StepDefinition {
 	@When("^clico no botao 'Enviar'$")
 	public void clico_no_botao_enviar() throws Throwable {
 	    stepB.clicarBotaoEnviar();
+	    try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Then("^sistema apresenta tela de resultado do calculo de precos e prazos \"([^\"]*)\"$")
@@ -124,8 +131,8 @@ public class StepDefinition {
 	
 	@When("^sistema apresenta o frame \"([^\"]*)\"$")
 	public void sistema_apresenta_o_frame(String tituloTela) throws Throwable {
-		stepB.mudarContextoParaFrame("colorbox");
-	    stepB.validarTitulo(tituloTela);
+		stepB.mudarContextoParaFrame("http://www.buscacep.correios.com.br");
+	    //stepB.validarTitulo(tituloTela);
 	}
 	
 	@When("^preencho no formulario \"([^\"]*)\" o campo \"([^\"]*)\" com o valor \"([^\"]*)\"$")
@@ -149,12 +156,29 @@ public class StepDefinition {
 			String logradouro, String cidadeUF, String numero, String bairro) throws Throwable
 	{
 	    //stepB.encontrarCepNaTabelaPorBairro(logradouro, cidadeUF, bairro);
-		stepB.encontrarCepNaTabelaPorNumero(logradouro, cidadeUF, numero);
+		try {
+		stepB.encontrarCepNaTabelaPorNumero(logradouro, cidadeUF, numero, false);
+		} catch (NumberFormatException ex)
+		{
+			Log.info(ex.getMessage());
+		}
 	}
 	
-	@Then("^retorno para a tela principal$")
+	@When("^retorno para a tela principal$")
 	public void retorno_para_a_tela_principal()
 	{
 		stepB.retornarTelaPrincipal();
+	}
+	
+	@When("^preencho o CEP encontrado no campo 'CEP de origem'$")
+	public void preencho_o_CEP_encontrado_no_campo_CEP_de_origem()
+	{
+		stepB.preencherCepEncontradoOrigem();
+	}
+	
+	@When("^preencho o CEP encontrado no campo 'CEP de destino'$")
+	public void preencho_o_CEP_encontrado_no_campo_CEP_de_destino()
+	{
+		stepB.preencherCepEncontradoDestino();
 	}
 }

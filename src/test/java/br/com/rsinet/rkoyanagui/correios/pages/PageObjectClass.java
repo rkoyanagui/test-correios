@@ -71,6 +71,13 @@ public class PageObjectClass extends PageObject{
 	@FindBy(xpath = "//*[@id=\"tableNomeAgencia\"]/tbody/tr/td[1]/a")
 	private WebElement resultadoBuscaAgencia;
 	
+	//@FindBy(xpath = "//*[@id=\"cboxClose\"][contains(text(), \"close\")]")
+	private WebElement botaoFecharFrame;
+	
+	public WebElement getBotaoFecharFrame() {
+		return this.find(By.xpath("//*[@id=\"cboxClose\"][contains(text(), \"close\")]"));
+	}
+
 	public void switchToWindow(String windowHandle) {
 		WebDriver driver = this.getDriver();
 		driver.switchTo().window(windowHandle);
@@ -87,14 +94,12 @@ public class PageObjectClass extends PageObject{
 		abas.addAll(driver.getWindowHandles());
 		return abas.get(counter);
 	}
-	/*
-	public List<WebElement> contarNaTabelaTodasOcorrencias (String text)
+	
+	public void voltarTelaPrincipal()
 	{
-		List<WebElement> list = new ArrayList<WebElementFacade>();
-		WebElement facade = new WebElementFacade();
-		this.f
-		list = this.findAll(By.xpath("//table/tbody/tr/td/a[contains(text(), \"" + text + "\")]"));
-	}*/
+		WebDriver driver = this.getDriver();
+		driver.switchTo().defaultContent();
+	}
 	
 	/**
 	 * @return o primeiro elemento, de qualquer tag ou tipo, que
@@ -154,9 +159,23 @@ public class PageObjectClass extends PageObject{
 	 * @param ancestorId é o id de algum dos ancestrais
 	 * (de qualquer nível) do iframe buscado.
 	*/
-	public WebElement getFrame(String ancestorId) {
+	public WebElement getFrameByAncestorId(String ancestorId) {
 		return this.find(By.xpath(
 				"//*[@id=\"" + ancestorId + "\"]//iframe[1]" ));
+	}
+	
+	/**
+	 * Busca o primeiro <b>iframe</b> encontrado que tenha
+	 * src = "src".
+	 * 
+	 * @return o primeiro <b>frame</b> encontrado tendo um src
+	 * igual ao parâmetro <b>src</b>
+	 * 
+	 * @param src é valor do parâmetro de mesmo nome do iframe buscado.
+	*/
+	public WebElement getFrameBySrc(String src) {
+		return this.find(By.xpath(
+				"//iframe[@src=\"" + src + "\"][1]" ));
 	}
 	
 	/**
@@ -198,7 +217,7 @@ public class PageObjectClass extends PageObject{
 			throws IllegalArgumentException, NoSuchFrameException, StaleElementReferenceException {
 		if (counter < 1) {
 			throw new IllegalArgumentException(
-					"Erro: o método \'void PageObjectClass.switchToFrame(int counter)\' "
+					"Erro: o método 'void PageObjectClass.switchToFrame(int counter)' "
 					+ "aceita somente um número inteiro maior que zero.");
 		}
 		WebElement selectedFrame = this.find(By.xpath(
